@@ -17,94 +17,97 @@ export const socialIcons = [
   },
 ];
 
-export const Home = [
+export const dataOfList = [
   {
     id: 1,
-    desc: 'home',
+    title: 'home',
+    item: [
+      {
+        id: 1,
+        desc: 'Saas',
+      },
+      {
+        id: 2,
+        desc: 'Event',
+      },
+      {
+        id: 3,
+        desc: 'Mobile App',
+      },
+      {
+        id: 4,
+        desc: 'Desktop App',
+      },
+      {
+        id: 5,
+        desc: 'Startup',
+      },
+    ],
   },
   {
     id: 2,
-    desc: 'Saas',
+    title: 'Company',
+    item: [
+      {
+        id: 1,
+        desc: 'About Us',
+      },
+      {
+        id: 2,
+        desc: 'Pricing',
+      },
+      {
+        id: 3,
+        desc: 'Careers',
+      },
+      {
+        id: 4,
+        desc: 'Contact',
+      },
+      {
+        id: 5,
+        desc: 'blog',
+      },
+    ],
   },
   {
     id: 3,
-    desc: 'Event',
+    title: 'Account',
+    item: [
+      {
+        id: 1,
+        desc: 'Sign Up',
+      },
+      {
+        id: 2,
+        desc: 'Sign In',
+      },
+      {
+        id: 3,
+        desc: 'Forgot Password',
+      },
+    ],
   },
   {
     id: 4,
-    desc: 'Mobile App',
-  },
-  {
-    id: 5,
-    desc: 'Desktop App',
-  },
-  {
-    id: 6,
-    desc: 'Startup',
-  },
-];
-
-export const Company = [
-  {
-    id: 1,
-    desc: 'Company',
-  },
-  {
-    id: 2,
-    desc: 'About Us',
-  },
-  {
-    id: 3,
-    desc: 'Pricing',
-  },
-  {
-    id: 4,
-    desc: 'Careers',
-  },
-  {
-    id: 5,
-    desc: 'Contact',
-  },
-  {
-    id: 6,
-    desc: 'blog',
-  },
-];
-
-export const Account = [
-  {
-    id: 1,
-    desc: 'Account',
-  },
-  {
-    id: 2,
-    desc: 'Sign Up',
-  },
-  {
-    id: 3,
-    desc: 'Sign In',
-  },
-  {
-    id: 4,
-    desc: 'Forgot Password',
-  },
-];
-
-export const Get_Help = [
-  {
-    id: 1,
-    desc: 'Get Help',
-  },
-  {
-    id: 2,
-    desc: 'Developers Help',
-  },
-  {
-    id: 3,
-    desc: 'Docs',
-  },
-  {
-    id: 4,
-    desc: 'Free Training',
+    title: 'Get Help',
+    item: [
+      {
+        id: 1,
+        desc: 'Developer Help',
+      },
+      {
+        id: 2,
+        desc: 'Docs',
+      },
+      {
+        id: 3,
+        desc: 'Free Training',
+      },
+      {
+        id: 4,
+        desc: 'Contact Sales',
+      },
+    ],
   },
 ];

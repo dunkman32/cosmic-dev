@@ -2,16 +2,18 @@ import { PaddingContainer, StyledPaddingWrapper } from '@src/components/shared';
 import styled from 'styled-components';
 
 export const Root = styled(StyledPaddingWrapper)`
+  position: absolute;
     width: 100%;
+    background-color:#212429;
+    height: 710px;
+    display: flex;
+    align-items: center;
+    bottom:0;
 `;
 
 export const Main = styled(PaddingContainer)`
-  position: absolute;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 710px;
-  bottom:0;
 `;
 
 export const Title = styled.div`
@@ -42,6 +44,26 @@ export const Icon = styled.div`
   font-size:38px;
 `;
 
-export const ListContainer = styled.div`
-  font-size:38px;
+export const ListGrid = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 89.3px;
+`;
+
+export const TitleOfList = styled.div`
+  margin: 0 0 44.8px 0;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left;
+  color: #fafafa;
+`;
+
+export const Items = styled.div`
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: left;
+  color: #d1e0fb;
+  margin-bottom: 20px;
 `;
