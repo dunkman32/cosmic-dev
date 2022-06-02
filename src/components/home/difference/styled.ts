@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export const Root = styled(StyledPaddingWrapper)`
   position: relative;
+  padding: 0 17px;
 `;
 
 export const Content = styled(PaddingContainer)`
@@ -75,4 +76,15 @@ export const WrappedDesc = styled.span`
   font-weight: 500;
   color: #d1e0fb;
   width: 150px;
+`;
+
+export const ImgWrapper = styled.div`
+  position: absolute;
+  width: 492px;
+  height: 517px;
+  background-color: #212429;
+  border-radius: 20px;
+  box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
+  top: 180px;
+  right: 300px;
 `;

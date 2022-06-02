@@ -1,4 +1,5 @@
 import React from 'react';
+import Blob from '@root/public/images/blob';
 import {
   Root,
   Title,
@@ -10,6 +11,8 @@ import {
   WrappedTitle,
   WrappedDesc,
   ProjectsWrapper,
+  ImgWrapper,
+  ImgHolder,
 } from './styled';
 
 const data = [
@@ -47,6 +50,9 @@ const Difference = () => {
             </Wrapper>
           ))}
         </ProjectsWrapper>
+        <ImgWrapper>
+          <Blob />
+        </ImgWrapper>
       </Content>
     </Root>
   );

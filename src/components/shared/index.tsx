@@ -31,7 +31,7 @@ export const PaddingContainer = styled(Box)`
   }
 
   ${(props) => props.theme.breakpoints.up('lg')} {
-    width: 82.5%;
+    width: 84.4%;
     max-width: 1620px;
   }
 `;
