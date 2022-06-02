@@ -1,8 +1,9 @@
 import Layout from '@src/components/layout';
+import MainsHeader from '@src/components/home/header';
 
 const Home = () => {
   return (
-    <div>main</div>
+    <MainsHeader />
   );
 };
 

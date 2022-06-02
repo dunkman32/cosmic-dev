@@ -7,7 +7,7 @@ interface Props {
 
 const CustomLink = ({ children, newTab, ...props }:PropsWithChildren<LinkProps> & Props) => {
   return (
-    <Link {...props}>
+    <Link {...props} style={{ cursor: 'pointer' }}>
       <a target={newTab ? '_blank' : '_self'}>{children}</a>
     </Link>
   );

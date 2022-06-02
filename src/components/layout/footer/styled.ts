@@ -2,7 +2,7 @@ import { PaddingContainer, StyledPaddingWrapper } from '@src/components/shared';
 import styled from 'styled-components';
 
 export const Root = styled(StyledPaddingWrapper)`
-  position: absolute;
+    position: relative;
     width: 100%;
     background-color:#212429;
     height: 710px;

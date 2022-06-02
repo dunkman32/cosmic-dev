@@ -11,6 +11,8 @@ import {
   TitleOfList,
 } from 'src/components/layout/footer/styled';
 import { dataOfList, socialIcons } from '@src/components/layout/footer/helper';
+import CustomLink from '@src/components/shared/customLink';
+import { Typography } from '@mui/material';
 
 const Footer = () => {
   return (
@@ -26,15 +28,26 @@ const Footer = () => {
               </div>
             ))}
           </List>
+          <Typography sx={{
+            color: '#77838f',
+            fontSize: '13px',
+            paddingLeft: '5px',
+            marginTop: '167px',
+          }}
+          >
+            © CosmicDev
+            {' '}
+            {new Date().getFullYear()}
+          </Typography>
         </Column>
         <ListGrid>
           {dataOfList.map((val) => (
             <div key={val.id}>
               <TitleOfList>{val.title}</TitleOfList>
               {val.item.map((data) => (
-                <div key={data.id}>
+                <CustomLink key={data.id} href="/">
                   <Items>{data.desc}</Items>
-                </div>
+                </CustomLink>
               ))}
             </div>
           ))}
