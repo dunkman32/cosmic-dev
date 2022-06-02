@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   * {
     color: #ffff;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;

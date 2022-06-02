@@ -2,7 +2,12 @@ import { PaddingContainer, StyledButton, StyledPaddingWrapper } from '@src/compo
 import styled from 'styled-components';
 
 export const Root = styled(StyledPaddingWrapper)`
-    width: 100%;
+  position:fixed;
+  width: 100%;
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  z-index: 10;
 `;
 
 export const Main = styled(PaddingContainer)`
@@ -10,18 +15,30 @@ export const Main = styled(PaddingContainer)`
   justify-content: space-between;
   align-items: center;
   height: 117px;
+  z-index: 10;
 `;
 
-export const Logo = styled.div`
-  border-radius:0 0 240px 240px;
+export const Logo = styled.span`
   font-size: 20px;
   font-weight: bold;
+`;
+
+export const Logo3 = styled(Logo)`
+  color: #212429;
+`;
+
+export const LogoWrapper = styled.div`
+  display: flex;
+  background: #377dff;
+  border-radius:0 0 70px 70px;
+  padding: 40px;
+  gap: 5px;
 `;
 
 export const List = styled.div`
    display: flex;
    gap: 38.4px;
-  align-items: center;
+   align-items: center;
 `;
 
 export const Card = styled.div`
