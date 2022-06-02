@@ -6,6 +6,8 @@ import {
   Desc,
   List,
   Button,
+  LogoWrapper,
+  Logo3,
 } from '@src/components/layout/header/styled';
 import { Navbar } from '@src/components/layout/header/helper';
 
@@ -13,7 +15,10 @@ const MyComponent = () => {
   return (
     <Root>
       <Main>
-        <Logo>CosmicDev</Logo>
+        <LogoWrapper>
+          <Logo>Cosmic</Logo>
+          <Logo3>{' { Dev } '}</Logo3>
+        </LogoWrapper>
         <List>
           {Navbar.map((val) => (
             <Card key={val.id}>
