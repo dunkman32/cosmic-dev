@@ -13,6 +13,7 @@ import {
   TitleWrapper,
   ButtonWrapper,
   StyledButtons,
+  BlueRectangle,
 } from '@src/components/home/header/styled';
 import { HeadersData } from '@src/components/home/header/helper';
 
@@ -21,20 +22,17 @@ const MainsHeader = () => {
     <Root>
       <Content>
         <TitleWrapper>
-          <Welcome>Welcome</Welcome>
-          <Title>Ready to Help you in your projects!</Title>
+          <Welcome>WELCOME</Welcome>
+          <BlueRectangle>
+            <Title>Ready to Help you in your projects!</Title>
+          </BlueRectangle>
           <Desc>
-            Our sales team will get in touch to better
-            understand your needs, and will help you with
-            the sign-up process
+            Our sales team will get in touch to better understand your needs,
+            and will help you with the sign-up process
           </Desc>
           <ButtonWrapper>
-            <Button>
-              Start Now
-            </Button>
-            <StyledButtons>
-              Contact Sales
-            </StyledButtons>
+            <Button>Start Now</Button>
+            <StyledButtons>Contact Sales</StyledButtons>
           </ButtonWrapper>
         </TitleWrapper>
         <Flex>

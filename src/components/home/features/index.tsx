@@ -22,7 +22,7 @@ const feature = () => {
           <Blob />
         </ImgWrapper>
         <TextWrapper>
-          <Feature>feature</Feature>
+          <Feature>FEATURES</Feature>
           <Background>
             <Title>
               Connect the tools you already use

@@ -10,37 +10,41 @@ export const Content = styled(PaddingContainer)`
   align-items: start;
   justify-content: space-between;
   margin-top: 274px;
-  padding: 0 100px 0 100px;
 `;
 
 export const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  gap: 35px;
-  max-width: 439px;
+  width: 100%;
 `;
 
 export const Title = styled.span`
   font-size: 40px;
-  height: 113px;
   font-weight: bold;
   line-height: 1.23;
   text-align: left;
   color: #fff;
+  max-width: 450px;
+  margin: 14px 0;
 `;
 
 export const Desc = styled.span`
   text-align: left;
   color: #d1e0fb;
-  width: 345px;
+  width: 450px;
   font-size: 20px;
   font-weight: 500;
+  line-height: 1.8;
+  margin-top: 36px;
+  margin-left: 146px;
 `;
 
 export const ButtonWrapper = styled.div`
   display: flex;
   gap: 11px;
+  margin-top: 26px;
+  margin-left: 146px;
 `;
 
 export const Button = styled(StyledButton)`
@@ -63,10 +67,13 @@ export const StyledButtons = styled(Button)`
 
 export const Flex = styled.div`
   display: flex;
+  position: absolute;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 30px;
+  max-width: 1000px;
+  right: 134px;
 `;
 
 export const Card = styled.div`
@@ -98,15 +105,24 @@ export const CardDesc = styled.div`
   line-height: 1.4;
   text-align: left;
   color: #fff;
-  margin-top:25px;
+  margin-top: 25px;
   max-width: 207px;
 `;
 
 export const Welcome = styled.div`
-  height: 16px;
+  color: #4579f5;
+  margin: 16px 0;
+  margin-left: 154px;
   font-size: 13px;
   font-weight: 600;
-  line-height: 1.85;
-  text-align: left;
-  color: #4579f5;
+  letter-spacing: 1px;
+`;
+
+export const BlueRectangle = styled.div`
+  display: flex;
+  width: 100%;
+  background-color: #377dff;
+  padding: 0 146px;
+  border-bottom-left-radius: 300px;
+  border-top-right-radius: 300px;
 `;

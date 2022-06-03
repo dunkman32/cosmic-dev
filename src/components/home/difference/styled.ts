@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const Root = styled(StyledPaddingWrapper)`
   position: relative;
   padding: 0 17px;
+  margin-top: 400px;
 `;
 
 export const Content = styled(PaddingContainer)`
