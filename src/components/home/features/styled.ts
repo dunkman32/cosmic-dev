@@ -1,15 +1,18 @@
 import { PaddingContainer } from '@src/components/shared';
+import { Button } from '@mui/material';
 import styled from 'styled-components';
 
 export const Root = styled(PaddingContainer)`
-  position:relative;
+  position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: right;
   align-items: start;
   margin: 353px 0 398px;
 `;
 
 export const ImgWrapper = styled.div`
+  position:absolute;
+  left:119px;
   width: 492px;
   height: 517px;
   background-color: #212429;
@@ -21,7 +24,8 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 28px;
-  max-width: 520px;
+  //max-width: 461px;
+  margin-right: 222px;
 `;
 
 export const Feature = styled.div`
@@ -30,8 +34,9 @@ export const Feature = styled.div`
   font-weight: 600;
   line-height: 1.85;
   letter-spacing: 1px;
-  text-align: left;
+  text-align: right;
   color: #4579f5;
+  max-width: 461px;
 `;
 
 export const Title = styled.div`
@@ -40,6 +45,7 @@ export const Title = styled.div`
   font-weight: bold;
   line-height: 1.23;
   text-align: left;
+  max-width: 461px;
 `;
 
 export const Desc = styled.div`
@@ -51,8 +57,35 @@ export const Desc = styled.div`
   text-align: left;
   color: #d1e0fb;
   margin-top: 12px;
+  max-width: 461px;
 `;
 
 export const Grid = styled.div`
-    
+  display: grid;
+  grid-auto-flow: column;
+  grid-row-gap: 25px;
+  grid-template-rows: repeat(2, 1fr);
+`;
+
+export const Buttons = styled(Button)<{bgColor?:string, bxShadow?:string, blue?:boolean}>`
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 205px;
+  height: 84px;
+  border-radius: 12px;
+  background-image: ${({ bgColor }) => bgColor || 'none'};
+  box-shadow:${({ bxShadow }) => bxShadow || ' none'};
+  background-color:${({ blue }) => (blue ? '#4579f5' : 'none')};
+  cursor: pointer;
+  &:hover {
+    background-color:${({ blue }) => (blue ? '#4579f5' : 'none')};
+  }
+`;
+
+export const Background = styled.div`
+   width: 100%;
+   background-color:#4579f5;
+   
 `;

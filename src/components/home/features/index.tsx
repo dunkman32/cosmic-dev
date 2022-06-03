@@ -6,9 +6,13 @@ import {
   Title,
   Feature,
   ImgWrapper,
-  TextWrapper, Grid,
+  TextWrapper,
+  Grid,
+  Buttons,
+  Background,
 } from '@src/components/home/features/styled';
 import Blob from '@root/public/images/blob';
+import { featuresData } from '@src/components/home/features/helper';
 
 const feature = () => {
   return (
@@ -19,12 +23,23 @@ const feature = () => {
         </ImgWrapper>
         <TextWrapper>
           <Feature>feature</Feature>
-          <Title>
-            Connect the tools you already use
-          </Title>
+          <Background>
+            <Title>
+              Connect the tools you already use
+            </Title>
+          </Background>
           <Desc>Our extensive developer tools might also strike your fancy.</Desc>
           <Grid>
-            jsdfjgklsj
+            {featuresData.map((val) => (
+              <Buttons
+                key={val.id}
+                bgColor={val.backgroundColor}
+                bxShadow={val.shadow}
+                blue
+              >
+                {val.icon}
+              </Buttons>
+            ))}
           </Grid>
         </TextWrapper>
       </Root>
