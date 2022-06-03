@@ -4,9 +4,8 @@ import styled from 'styled-components';
 export const Root = styled(StyledPaddingWrapper)`
   position:fixed;
   width: 100%;
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  background-color: #212429;; /* Black w/opacity/see-through */
   -webkit-backdrop-filter: blur(40px);
-  backdrop-filter: blur(40px);
   z-index: 10;
 `;
 
@@ -30,7 +29,7 @@ export const Logo3 = styled(Logo)`
 export const LogoWrapper = styled.div`
   display: flex;
   background: #377dff;
-  border-radius:0 0 70px 70px;
+  border-radius:0 0 80px 80px;
   padding: 40px;
   gap: 5px;
 `;

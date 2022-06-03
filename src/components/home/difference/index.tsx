@@ -12,7 +12,6 @@ import {
   WrappedDesc,
   ProjectsWrapper,
   ImgWrapper,
-  ImgHolder,
 } from './styled';
 
 const data = [

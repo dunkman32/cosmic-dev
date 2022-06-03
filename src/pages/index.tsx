@@ -2,12 +2,14 @@ import Layout from '@src/components/layout';
 import MainsHeader from '@src/components/home/header';
 import Difference from '@src/components/home/difference';
 import Partner from '@src/components/home/partner';
+import Feature from '@src/components/home/features';
 
 const Home = () => {
   return (
     <>
       <MainsHeader />
       <Difference />
+      <Feature />
       <Partner />
     </>
   );
