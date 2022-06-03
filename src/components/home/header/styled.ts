@@ -45,6 +45,13 @@ export const ButtonWrapper = styled.div`
   gap: 11px;
   margin-top: 26px;
   margin-left: 146px;
+  margin-right: 120px;
+`;
+export const LowerWrapper = styled.div`
+  display: flex;
+  gap: 11px;
+  margin-top: 26px;
+  justify-content: space-between;
 `;
 
 export const Button = styled(StyledButton)`
@@ -125,4 +132,14 @@ export const BlueRectangle = styled.div`
   padding: 0 146px;
   border-bottom-left-radius: 300px;
   border-top-right-radius: 300px;
+`;
+export const LowerBlueRectangle = styled.div`
+  display: flex;
+  width: 100%;
+  background-color: #377dff;
+  padding: 0 146px;
+  border-bottom-left-radius: 300px;
+  border-bottom-right-radius: 300px;
+  height: 128px;
+  width: 100%;
 `;

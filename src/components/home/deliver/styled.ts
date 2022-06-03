@@ -10,7 +10,6 @@ export const Content = styled(PaddingContainer)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 157px;
 `;
 
 export const TitleWrapper = styled.div`
@@ -96,6 +95,5 @@ export const ImgWrapper = styled.div`
   background-color: #212429;
   border-radius: 20px;
   box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
-  top: 180px;
   right: 300px;
 `;

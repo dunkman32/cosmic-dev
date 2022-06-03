@@ -87,5 +87,5 @@ export const ImgWrapper = styled.div`
   background-color: #212429;
   border-radius: 20px;
   box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
-  right: 0;
+  right: 128px;
 `;

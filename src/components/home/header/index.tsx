@@ -14,6 +14,8 @@ import {
   ButtonWrapper,
   StyledButtons,
   BlueRectangle,
+  LowerBlueRectangle,
+  LowerWrapper,
 } from '@src/components/home/header/styled';
 import { HeadersData } from '@src/components/home/header/helper';
 
@@ -30,10 +32,13 @@ const MainsHeader = () => {
             Our sales team will get in touch to better understand your needs,
             and will help you with the sign-up process
           </Desc>
-          <ButtonWrapper>
-            <Button>Start Now</Button>
-            <StyledButtons>Contact Sales</StyledButtons>
-          </ButtonWrapper>
+          <LowerWrapper>
+            <ButtonWrapper>
+              <Button>Start Now</Button>
+              <StyledButtons>Contact Sales</StyledButtons>
+            </ButtonWrapper>
+            <LowerBlueRectangle />
+          </LowerWrapper>
         </TitleWrapper>
         <Flex>
           {HeadersData.map((val) => (
