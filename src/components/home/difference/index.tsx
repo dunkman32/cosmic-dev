@@ -1,5 +1,5 @@
 import React from 'react';
-import Blob from '@root/public/images/blob';
+import SectionOne from '@src/components/shared/icons/difflerence';
 import {
   Root,
   Title,
@@ -49,7 +49,7 @@ const Difference = () => {
           ))}
         </ProjectsWrapper>
         <ImgWrapper>
-          <Blob />
+          <SectionOne />
         </ImgWrapper>
       </Content>
     </Root>

@@ -1,19 +1,24 @@
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
+
 export const socialIcons = [
   {
     id: 1,
-    icon: '🐧',
+    icon: <FacebookIcon sx={{ width: '38px', height: '38px' }} />,
   },
   {
     id: 2,
-    icon: '🐧',
+    icon: <InstagramIcon sx={{ width: '38px', height: '38px' }} />,
   },
   {
     id: 3,
-    icon: '🐧',
+    icon: <TwitterIcon sx={{ width: '38px', height: '38px' }} />,
   },
   {
     id: 4,
-    icon: '🐧',
+    icon: <SportsBasketballIcon sx={{ width: '38px', height: '38px' }} />,
   },
 ];
 

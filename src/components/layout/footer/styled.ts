@@ -14,6 +14,7 @@ export const Root = styled(StyledPaddingWrapper)`
 export const Main = styled(PaddingContainer)`
   display: flex;
   justify-content: space-between;
+  padding:0 105px 0 105px;
 `;
 
 export const Title = styled.div`
@@ -41,7 +42,7 @@ export const List = styled.div`
 `;
 
 export const Icon = styled.div`
-  font-size:38px;
+  cursor: pointer;
 `;
 
 export const ListGrid = styled.div`

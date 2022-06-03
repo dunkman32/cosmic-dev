@@ -1,12 +1,14 @@
+/* eslint-disable max-len */
 import React from 'react';
-import Blob from '@root/public/images/blob';
+import Check from '@src/components/shared/icons/check';
+import HelpIcon from '@src/components/shared/icons/help';
+import Delivers from '@src/components/shared/icons/deliver';
 import {
   Root,
   Title,
   Content,
   TitleWrapper,
   Caption,
-  Desc,
   Wrapper,
   WrappedTitle,
   WrappedDesc,
@@ -18,12 +20,19 @@ import {
 
 const data = [
   {
-    icon: '😶‍🌫️',
+    id: 1,
+    icon: <Check />,
+    text: ' Create and publish answers for customers and reduce your customer support volume by at least 20%. Happier customers, fewer conversations - everyone wins.',
+  },
+  {
+    id: 2,
+    icon: <HelpIcon />,
     title: 'Launch a help center website',
     text: 'Your knowledge base software has an auto-generated sitemap and configurable SEO options for each article.',
   },
   {
-    icon: '🐀',
+    id: 3,
+    icon: <Check />,
     title: 'Deliver instant answers',
     text: 'Customers won’t even have to leave your website to find the right answer and keep moving forward.',
   },
@@ -37,24 +46,21 @@ const Deliver = () => {
         <TitleWrapper>
           <Title>Deliver instant answers with knowledge base</Title>
         </TitleWrapper>
-        <Desc>
-          Create and publish answers for customers and reduce your customer
-          support volume by at least 20%. Happier customers, fewer conversations
-          - everyone wins.
-        </Desc>
         <ProjectsWrapper>
-          {data.map(({ icon, title, text }) => (
-            <Wrapper key={title}>
+          {data.map(({
+            icon, title, text, id,
+          }) => (
+            <Wrapper key={id}>
               <LeftWrapper>{icon}</LeftWrapper>
               <RightWrapper>
-                <WrappedTitle>{title}</WrappedTitle>
+                {title && <WrappedTitle>{title}</WrappedTitle>}
                 <WrappedDesc>{text}</WrappedDesc>
               </RightWrapper>
             </Wrapper>
           ))}
         </ProjectsWrapper>
         <ImgWrapper>
-          <Blob />
+          <Delivers />
         </ImgWrapper>
       </Content>
     </Root>

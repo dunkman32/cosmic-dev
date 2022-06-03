@@ -5,7 +5,6 @@ import {
   Title,
   Desc,
   List,
-  Card,
   TitleWrapper,
 } from '@src/components/home/partner/styled';
 import { PartnersData } from '@src/components/home/partner/helper';
@@ -20,9 +19,9 @@ const Partner = () => {
         </TitleWrapper>
         <List>
           {PartnersData.map((val) => (
-            <Card key={val.id}>
+            <div key={val.id}>
               {val.svg}
-            </Card>
+            </div>
           ))}
         </List>
       </Root>

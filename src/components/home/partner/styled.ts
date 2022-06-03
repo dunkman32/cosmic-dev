@@ -34,16 +34,12 @@ export const Desc = styled.div`
 `;
 
 export const List = styled.div`
+  width: 1299px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 67px;
   height: 120px;
   border-radius: 12px;
   background-image: linear-gradient(95deg, #222529, #272a2f 20%, #2a2d31 38%, #2a2c31 58%, #272a2f 80%, #222529);
-`;
-
-export const Card = styled.div`
-  width: 168px;
-  height: 45px;
-  font-size:40px;
 `;

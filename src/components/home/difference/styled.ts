@@ -88,4 +88,6 @@ export const ImgWrapper = styled.div`
   border-radius: 20px;
   box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
   right: 128px;
+  display: flex;
+  align-items: flex-end;
 `;

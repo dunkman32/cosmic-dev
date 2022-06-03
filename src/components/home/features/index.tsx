@@ -11,15 +11,15 @@ import {
   Buttons,
   Background,
 } from '@src/components/home/features/styled';
-import Blob from '@root/public/images/blob';
 import { featuresData } from '@src/components/home/features/helper';
+import Partner from '@src/components/shared/icons/partner';
 
 const feature = () => {
   return (
     <StyledPaddingWrapper>
       <Root>
         <ImgWrapper>
-          <Blob />
+          <Partner />
         </ImgWrapper>
         <TextWrapper>
           <Feature>FEATURES</Feature>

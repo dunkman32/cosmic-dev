@@ -23,9 +23,9 @@ const Footer = () => {
           <Desc>ready to help  launch your project along with our well-designed pages</Desc>
           <List>
             {socialIcons.map((val) => (
-              <div key={val.id}>
-                <Icon>{val.icon}</Icon>
-              </div>
+              <Icon key={val.id}>
+                {val.icon}
+              </Icon>
             ))}
           </List>
           <Typography sx={{
