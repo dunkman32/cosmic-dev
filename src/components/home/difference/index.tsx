@@ -12,7 +12,6 @@ import {
   WrappedDesc,
   ProjectsWrapper,
   ImgWrapper,
-  ImgHolder,
 } from './styled';
 
 const data = [
@@ -39,8 +38,7 @@ const Difference = () => {
           <Title>Our people make the difference.</Title>
         </TitleWrapper>
         <Desc>
-          At any time, you can contact our support center for help, because we
-          won over 100 clients.
+          At any time, you can contact our support center for help, because we won over 100 clients.
         </Desc>
         <ProjectsWrapper>
           {data.map(({ num, text }) => (

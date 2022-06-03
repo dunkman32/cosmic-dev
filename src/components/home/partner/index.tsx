@@ -4,8 +4,11 @@ import {
   Root,
   Title,
   Desc,
+  List,
+  Card,
   TitleWrapper,
 } from '@src/components/home/partner/styled';
+import { PartnersData } from '@src/components/home/partner/helper';
 
 const Partner = () => {
   return (
@@ -15,6 +18,13 @@ const Partner = () => {
           <Title>PARTNER</Title>
           <Desc>Trusted by more than 5,000 businesses in 122 countries.</Desc>
         </TitleWrapper>
+        <List>
+          {PartnersData.map((val) => (
+            <Card key={val.id}>
+              {val.svg}
+            </Card>
+          ))}
+        </List>
       </Root>
     </StyledPaddingWrapper>
   );
