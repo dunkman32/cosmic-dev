@@ -8,7 +8,6 @@ export const Root = styled(StyledPaddingWrapper)`
 
 export const Content = styled(PaddingContainer)`
   display: flex;
-  position: relative;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 157px;
@@ -20,17 +19,18 @@ export const TitleWrapper = styled.div`
   gap: 35px;
   width: 100%;
   background-color: #377dff;
-  padding: 0 100px;
-  border-top-left-radius: 300px;
-  border-bottom-right-radius: 300px;
+  border-bottom-left-radius: 300px;
+  border-top-right-radius: 300px;
 `;
 
 export const Caption = styled.span`
   color: #4579f5;
-  margin: 12px 0;
-  margin-left: 154px;
+  margin: 19px 0;
+  margin-left: 123px;
   font-size: 13px;
   font-weight: 600;
+  line-height: 1.85;
+  letter-spacing: 1px;
 `;
 
 export const Title = styled.span`
@@ -39,14 +39,14 @@ export const Title = styled.span`
   line-height: 1.23;
   text-align: left;
   color: #fff;
-  width: 400px;
-  margin: 15px 50px;
+  width: 500px;
+  margin: 15px 210px;
 `;
 
 export const Desc = styled.span`
   font-size: 20px;
   margin-top: 26px;
-  margin-left: 150px;
+  margin-left: 210px;
   font-weight: 500;
   line-height: 1.5;
   width: 470px;
@@ -55,28 +55,38 @@ export const Desc = styled.span`
 
 export const ProjectsWrapper = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 25px;
-  margin-left: 150px;
+  margin-left: 166px;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+`;
+
+export const LeftWrapper = styled.div`
+  margin-right: 20px;
+  margin-top: 20px;
+`;
+export const RightWrapper = styled.div`
+  display: flex;
   flex-direction: column;
-  margin-right: 60px;
 `;
 
 export const WrappedTitle = styled.span`
-  color: #377dff;
-  font-size: 55px;
+  font-size: 25px;
   font-weight: bold;
+  margin-bottom: 26px;
 `;
 
 export const WrappedDesc = styled.span`
   font-size: 20px;
   font-weight: 500;
   color: #d1e0fb;
-  width: 150px;
+  width: 450px;
+  line-height: 1.5;
 `;
 
 export const ImgWrapper = styled.div`
@@ -86,5 +96,6 @@ export const ImgWrapper = styled.div`
   background-color: #212429;
   border-radius: 20px;
   box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
-  right: 0;
+  top: 180px;
+  right: 300px;
 `;
