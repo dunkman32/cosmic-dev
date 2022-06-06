@@ -6,26 +6,26 @@ import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
 export const socialIcons = [
   {
     id: 1,
-    icon: <FacebookIcon sx={{ width: '38px', height: '38px' }} />,
+    icon: <FacebookIcon sx={{ width: '38px', height: '38px', fill: '#77838f' }} />,
   },
   {
     id: 2,
-    icon: <InstagramIcon sx={{ width: '38px', height: '38px' }} />,
+    icon: <InstagramIcon sx={{ width: '38px', height: '38px', fill: '#77838f' }} />,
   },
   {
     id: 3,
-    icon: <TwitterIcon sx={{ width: '38px', height: '38px' }} />,
+    icon: <TwitterIcon sx={{ width: '38px', height: '38px', fill: '#77838f' }} />,
   },
   {
     id: 4,
-    icon: <SportsBasketballIcon sx={{ width: '38px', height: '38px' }} />,
+    icon: <SportsBasketballIcon sx={{ width: '38px', height: '38px', fill: '#77838f' }} />,
   },
 ];
 
 export const dataOfList = [
   {
     id: 1,
-    title: 'home',
+    title: 'Home',
     item: [
       {
         id: 1,

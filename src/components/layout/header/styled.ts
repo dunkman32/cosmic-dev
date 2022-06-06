@@ -5,7 +5,6 @@ export const Root = styled(StyledPaddingWrapper)`
   position:fixed;
   width: 100%;
   background-color: #212429;; /* Black w/opacity/see-through */
-  -webkit-backdrop-filter: blur(40px);
   z-index: 10;
 `;
 

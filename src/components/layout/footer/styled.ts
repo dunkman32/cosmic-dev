@@ -24,6 +24,7 @@ export const Title = styled.div`
 
 export const Desc = styled.div`
   max-width: 371.5px;
+  height: 86.7px;
   font-size: 20px;
   line-height: 1.2;
   text-align: left;
@@ -52,7 +53,7 @@ export const ListGrid = styled.div`
 `;
 
 export const TitleOfList = styled.div`
-  margin: 0 0 44.8px 0;
+  margin: -20px 0 40.8px 0;
   font-size: 25px;
   font-weight: 600;
   line-height: 1.4;
