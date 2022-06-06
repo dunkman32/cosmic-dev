@@ -74,19 +74,21 @@ export const Grid = styled.div`
 `;
 
 export const Buttons = styled(Button)<{ bgColor?: string; bxShadow?: string; blue?: boolean }>`
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 205px;
-  height: 84px;
-  margin-right: 24px;
-  border-radius: 12px;
-  background: ${({ bgColor }) => bgColor || '#4579f5'};
-  box-shadow: ${({ bxShadow }) => bxShadow || 'none'};
-  cursor: pointer;
-  &:hover {
-    background: ${({ blue }) => (blue ? '#4579f5' : 'none')};
+  &&& {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 205px;
+    height: 84px;
+    margin-right: 24px;
+    border-radius: 12px;
+    background: ${({ bgColor }) => bgColor || '#4579f5'};
+    box-shadow: ${({ bxShadow }) => bxShadow || 'none'};
+    cursor: pointer;
+    &:hover {
+      background: ${({ blue }) => (blue ? '#4579f5' : 'none')};
+    }
   }
 `;
 
@@ -102,5 +104,6 @@ export const Background = styled.div`
 export const DescDiv = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 222px
+  margin-right: 222px;
+  row-gap: 28px;
 `;
