@@ -13,10 +13,6 @@ export const Navbar = [
   },
   {
     id: 4,
-    desc: 'Teams',
-  },
-  {
-    id: 5,
     desc: 'Clients',
   },
 ];
