@@ -56,7 +56,7 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 25px;
-  margin-left: 166px;
+  margin-left: 140px;
 `;
 
 export const Wrapper = styled.div`
@@ -80,12 +80,13 @@ export const WrappedTitle = styled.span`
   margin-bottom: 26px;
 `;
 
-export const WrappedDesc = styled.span`
+export const WrappedDesc = styled.span<{ space?: boolean }>`
   font-size: 20px;
   font-weight: 500;
   color: #d1e0fb;
   width: 450px;
   line-height: 1.5;
+  margin-left: ${({ space }) => (space ? '0' : '72px')};
 `;
 
 export const ImgWrapper = styled.div`
