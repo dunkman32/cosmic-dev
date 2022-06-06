@@ -24,9 +24,7 @@ const feature = () => {
         <TextWrapper>
           <Feature>FEATURES</Feature>
           <Background>
-            <Title>
-              Connect the tools you already use
-            </Title>
+            <Title>Connect the tools you already use</Title>
           </Background>
           <Desc>Our extensive developer tools might also strike your fancy.</Desc>
           <Grid>
@@ -35,7 +33,7 @@ const feature = () => {
                 key={val.id}
                 bgColor={val.backgroundColor}
                 bxShadow={val.shadow}
-                blue
+                blue={val.blue}
               >
                 {val.icon}
               </Buttons>
