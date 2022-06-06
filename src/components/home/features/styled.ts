@@ -63,13 +63,11 @@ export const Desc = styled.div`
   line-height: 1.5;
   text-align: left;
   color: #d1e0fb;
-  margin-right: 222px;
   max-width: 461px;
 `;
 
 export const Grid = styled.div`
   display: grid;
-  margin-right: 222px;
   grid-auto-flow: column;
   grid-row-gap: 25px;
   grid-template-rows: repeat(2, 1fr);
@@ -84,12 +82,11 @@ export const Buttons = styled(Button)<{ bgColor?: string; bxShadow?: string; blu
   height: 84px;
   margin-right: 24px;
   border-radius: 12px;
-  background-image: ${({ bgColor }) => bgColor || 'none'};
-  box-shadow: ${({ bxShadow }) => bxShadow || ' none'};
-  background-color: ${({ blue }) => (blue ? '#4579f5' : 'none')};
+  background: ${({ bgColor }) => bgColor || '#4579f5'};
+  box-shadow: ${({ bxShadow }) => bxShadow || 'none'};
   cursor: pointer;
   &:hover {
-    background-color: ${({ blue }) => (blue ? '#4579f5' : 'none')};
+    background: ${({ blue }) => (blue ? '#4579f5' : 'none')};
   }
 `;
 
@@ -100,4 +97,10 @@ export const Background = styled.div`
   background-color: #4579f5;
   border-bottom-left-radius: 300px;
   border-top-right-radius: 300px;
+`;
+
+export const DescDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-right: 222px
 `;
