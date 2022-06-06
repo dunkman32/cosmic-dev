@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import {
   Root,
@@ -18,6 +19,10 @@ import {
   LowerWrapper,
 } from '@src/components/home/header/styled';
 import { HeadersData } from '@src/components/home/header/helper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const MainsHeader = () => {
   return (
@@ -41,12 +46,21 @@ const MainsHeader = () => {
           </LowerWrapper>
         </TitleWrapper>
         <Flex>
-          {HeadersData.map((val) => (
-            <Card key={val.id}>
-              <Icon>{val.icon}</Icon>
-              <CardDesc>{val.desc}</CardDesc>
-            </Card>
-          ))}
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={3}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {HeadersData.map((val) => (
+              <SwiperSlide key={val.id}>
+                <Card>
+                  <Icon>{val.icon}</Icon>
+                  <CardDesc>{val.desc}</CardDesc>
+                </Card>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </Flex>
       </Content>
     </Root>
