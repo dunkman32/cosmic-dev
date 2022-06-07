@@ -11,12 +11,12 @@ const Home = () => {
       <MainsHeader />
       <Difference />
       <Feature />
-      <Deliver />
-      <Partner />
+      {/* <Deliver /> */}
+      {/* <Partner /> */}
     </>
   );
 };
 
-Home.getLayout = (page: JSX.Element) => <Layout>{page}</Layout>;
+// Home.getLayout = (page: JSX.Element) => <Layout>{page}</Layout>;
 
 export default Home;

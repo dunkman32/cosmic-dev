@@ -13,9 +13,6 @@ export const Content = styled(PaddingContainer)`
   justify-content: space-between;
   margin-top: 50px;
   overflow: hidden;
-  ${(props) => props.theme.breakpoints.up('md')} {
-    flex-direction: initial;
-  }
   ${(props) => props.theme.breakpoints.up('lg')} {
     margin-top: 274px;
   }
@@ -110,15 +107,11 @@ export const StyledButtons = styled(Button)`
 `;
 
 export const Flex = styled.div`
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  max-width: 600px;
-  right: 134px;
- 
-  
+  ${(props) => props.theme.breakpoints.up('md')} {
+   //position: absolute;
+  }
 `;
 
 export const Card = styled.div`
@@ -189,7 +182,7 @@ export const BlueRectangle = styled.div`
   border-top-left-radius: 300px;
   border-bottom-right-radius: 300px;
   ${(props) => props.theme.breakpoints.up('lg')} {
-   border-radius: 0px 0 0 150px;
+   border-radius: 0 0 0 150px;
   }
 `;
 export const LowerBlueRectangle = styled.div`
@@ -200,7 +193,17 @@ export const LowerBlueRectangle = styled.div`
   border-bottom-left-radius: 300px;
   border-bottom-right-radius: 300px;
   height: 128px;
-  ${(props) => props.theme.breakpoints.up('lg')} {
+  ${(props) => props.theme.breakpoints.up('md')} {
     display: flex;
+    height: 100px;
+  }
+`;
+
+export const ArrowWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    display: none;
   }
 `;
