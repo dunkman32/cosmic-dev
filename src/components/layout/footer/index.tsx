@@ -30,7 +30,7 @@ const Footer = () => {
           </List>
           <Typography sx={{
             color: '#77838f',
-            fontSize: '13px',
+            fontSize: '20px',
             paddingLeft: '5px',
             marginTop: '167px',
           }}

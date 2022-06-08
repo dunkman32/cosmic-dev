@@ -4,61 +4,87 @@ import styled from 'styled-components';
 export const Root = styled(StyledPaddingWrapper)`
   position: relative;
   padding: 0 17px;
-  margin-top: 400px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    margin-top: 340px;
+  }
 `;
 
 export const Content = styled(PaddingContainer)`
+  width: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 157px;
+  margin-top: 90px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    margin-top: 157px;
+  }
 `;
 
 export const TitleWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 35px;
   width: 100%;
   background-color: #377dff;
-  padding: 0 100px;
-  border-top-left-radius: 300px;
-  border-bottom-right-radius: 300px;
+  padding: 0 46px;
+  border-radius: 0 100px 0 100px;
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    border-radius: 300px 0 300px 0;
+  }
 `;
 
 export const Caption = styled.span`
   color: #4579f5;
   margin: 12px 0;
-  margin-left: 154px;
   font-size: 13px;
   font-weight: 600;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    margin-left: 154px;
+  }
 `;
 
 export const Title = styled.span`
-  font-size: 40px;
+  font-size: 25px;
   font-weight: bold;
   line-height: 1.23;
   text-align: left;
   color: #fff;
-  width: 400px;
-  margin: 15px 50px;
+  max-width: 450px;
+  margin: 14px 0;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    font-size: 30px;
+    max-width: 300px;
+  }
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    margin-left: 100px;
+    font-size: 40px;
+  }
+  ${(props) => props.theme.breakpoints.up('xl')} {
+    margin-left: 100px;
+    font-size: 40px;
+    max-width: 450px;
+  }
 `;
 
 export const Desc = styled.span`
-  font-size: 20px;
   margin-top: 26px;
-  margin-left: 150px;
   font-weight: 500;
   line-height: 1.5;
-  width: 470px;
   color: #d1e0fb;
+  font-size: 16px;
+  max-width: 450px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    font-size: 20px;
+    margin-left: 150px;
+  }
 `;
 
 export const ProjectsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 25px;
-  margin-left: 150px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    margin-left: 150px;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -69,15 +95,21 @@ export const Wrapper = styled.div`
 
 export const WrappedTitle = styled.span`
   color: #377dff;
-  font-size: 55px;
+  font-size: 16px;
   font-weight: bold;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    font-size: 55px;
+  }
 `;
 
 export const WrappedDesc = styled.span`
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   color: #d1e0fb;
-  width: 150px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    font-size: 20px;
+    width: 150px;
+  }
 `;
 
 export const ImgWrapper = styled.div`
@@ -88,6 +120,9 @@ export const ImgWrapper = styled.div`
   border-radius: 20px;
   box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
   right: 128px;
-  display: flex;
+  display: none;
   align-items: flex-end;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    display: flex;
+  }
 `;

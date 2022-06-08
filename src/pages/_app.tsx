@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps, ...props }: AppPropsWithLayout) {
   const theme = createTheme();
   return (
     <ThemeProvider theme={theme}>
-      <SCThemeProvider theme={theme}>
+      <SCThemeProvider theme={{}}>
         <CssBaseline />
         <GlobalStyle />
         <Provider Component={Component} pageProps={pageProps} {...props} />
