@@ -7,8 +7,7 @@ export const Root = styled(PaddingContainer)`
   display: flex;
   justify-content: flex-end;
   align-items: start;
-  margin: 90px 0 0;
-  margin-bottom: 90px;
+  margin: 90px 0 90px;
   ${(props) => props.theme.breakpoints.up('md')} {
     margin: 353px 0 398px;
   }
@@ -123,10 +122,7 @@ export const Background = styled.div`
   width: 100%;
   background-color: #377dff;
   padding: 0 46px;
-  border-radius: 0 100px 0 100px;
-  ${(props) => props.theme.breakpoints.up('lg')} {
-    border-radius: 300px 0 300px 0;
-  }
+  border-radius:  100px 0 100px 0;
 `;
 
 export const DescDiv = styled.div`

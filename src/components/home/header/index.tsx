@@ -69,7 +69,6 @@ const MainsHeader = () => {
         <Flex>
           <Swiper
             spaceBetween={5}
-            scrollbar={{ draggable: true }}
             onInit={(swiper) => setSwiperInstance(swiper)}
             breakpoints={{
               300: {
