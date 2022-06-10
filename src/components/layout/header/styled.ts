@@ -3,17 +3,25 @@ import styled from 'styled-components';
 
 export const Root = styled(StyledPaddingWrapper)`
   position:fixed;
+  top:0;
   width: 100%;
-  background-color: #212429;; /* Black w/opacity/see-through */
+  background-color:#212429; 
   z-index: 10;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    background-color: rgba(33, 36, 41, 0.5); /* Black w/opacity/see-through */
+    backdrop-filter: blur(40px);
+  }
 `;
 
 export const Main = styled(PaddingContainer)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 117px;
+  height: 88px;
   z-index: 10;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    height: 117px;
+  }
 `;
 
 export const Logo = styled.span`
@@ -26,17 +34,23 @@ export const Logo3 = styled(Logo)`
 `;
 
 export const LogoWrapper = styled.div`
-  display: flex;
+  display: none;
   background: #377dff;
   border-radius:0 0 80px 80px;
   padding: 40px;
   gap: 5px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    display: flex;
+  }
 `;
 
 export const List = styled.div`
-   display: flex;
+   display: none;
    gap: 38.4px;
    align-items: center;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    display: flex;
+  }
 `;
 
 export const Card = styled.div`
@@ -53,4 +67,24 @@ export const Desc = styled.div`
 
 export const Button = styled(StyledButton)`
     color: #ffff;
+`;
+
+export const BurgerArea = styled.div`
+  ${(props) => props.theme.breakpoints.up('xs')} {
+    width: 100%;
+    z-index: 9;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ${(props) => props.theme.breakpoints.up('md')} {
+    display: none;
+  }
+`;
+
+export const StyledBtn = styled.div`
+  font-size:12px;
+  color: white;
 `;

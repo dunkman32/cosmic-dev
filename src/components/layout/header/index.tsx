@@ -8,13 +8,23 @@ import {
   Button,
   LogoWrapper,
   Logo3,
+  BurgerArea,
+  StyledBtn,
 } from '@src/components/layout/header/styled';
 import { Navbar } from '@src/components/layout/header/helper';
+import { useState } from 'react';
+import Menu, { Burger } from './burger';
 
 const MyComponent = () => {
+  const [open, setOpen] = useState(false);
   return (
     <Root>
       <Main>
+        <BurgerArea>
+          <Menu open={open} setOpen={setOpen} />
+          <Burger open={open} setOpen={setOpen} />
+          <StyledBtn />
+        </BurgerArea>
         <LogoWrapper>
           <Logo>Cosmic</Logo>
           <Logo3>{' { Dev } '}</Logo3>

@@ -2,7 +2,7 @@
 
 const AffixSvg = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115 60" height="60">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 50" height="60">
       <g fill="none" fillRule="evenodd">
         <g fill="#FFF">
           <g>
