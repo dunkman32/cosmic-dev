@@ -52,7 +52,7 @@ export const List = styled.div`
   border-radius: 12px;
   background-image: linear-gradient(95deg, #222529, #272a2f 20%, #2a2d31 38%, #2a2c31 58%, #272a2f 80%, #222529);
   ${(props) => props.theme.breakpoints.up('md')} {
-    width: 1299px;
+    width: 100%;
     gap: 67px;
   }
 `;

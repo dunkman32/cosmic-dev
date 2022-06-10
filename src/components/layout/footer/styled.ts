@@ -5,16 +5,24 @@ export const Root = styled(StyledPaddingWrapper)`
     position: relative;
     width: 100%;
     background-color:#212429;
-    height: 710px;
     display: flex;
-    align-items: center;
     bottom:0;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    justify-content: center;
+    align-items: center;
+    height: 710px;
+  }
 `;
 
 export const Main = styled(PaddingContainer)`
   display: flex;
+  align-items: end;
   justify-content: space-between;
-  padding:0 105px 0 105px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    justify-content: space-between;
+    align-items: center;
+    padding:0 105px 0 105px;
+  }
 `;
 
 export const Title = styled.div`
@@ -47,13 +55,16 @@ export const Icon = styled.div`
 `;
 
 export const ListGrid = styled.div`
-  display: grid;
+  display: none;
   grid-auto-flow: column;
   grid-column-gap: 89.3px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    display: grid;
+  }
 `;
 
 export const TitleOfList = styled.div`
-  margin: -20px 0 40.8px 0;
+  margin: -190px 0 40.8px 0;
   font-size: 25px;
   font-weight: 600;
   line-height: 1.4;
