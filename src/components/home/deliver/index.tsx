@@ -33,7 +33,7 @@ const Deliver = () => {
               {icon && <LeftWrapper>{icon}</LeftWrapper>}
               <RightWrapper>
                 {title && <WrappedTitle>{title}</WrappedTitle>}
-                <WrappedDesc space={icon}>{text}</WrappedDesc>
+                <WrappedDesc space={Boolean(icon)}>{text}</WrappedDesc>
               </RightWrapper>
             </Wrapper>
           ))}

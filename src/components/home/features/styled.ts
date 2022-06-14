@@ -15,16 +15,22 @@ export const Root = styled(PaddingContainer)`
 
 export const ImgWrapper = styled.div`
   position: absolute;
-  left: 119px;
-  width: 492px;
-  height: 517px;
+  left: 5vw;
+  width: auto;
   background-color: #212429;
   border-radius: 20px;
   box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
   display: none;
   align-items: flex-end;
+  & svg {
+    height: auto;
+    width: 25vw;
+  }
   ${(props) => props.theme.breakpoints.up('md')} {
     display: flex;
+  }
+  ${(props) => props.theme.breakpoints.up('xl')} {
+    height: 517px;
   }
 `;
 
@@ -32,9 +38,11 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: right;
-  align-items: flex-end;
   gap: 28px;
   width: 100%;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    align-items: flex-end;
+  }
   //max-width: 461px;
 `;
 
@@ -63,28 +71,31 @@ export const Title = styled.div`
   ${(props) => props.theme.breakpoints.up('md')} {
     font-size: 30px;
     max-width: 300px;
+    margin-right: 150px;
   }
   ${(props) => props.theme.breakpoints.up('lg')} {
     margin-left: 100px;
-    font-size: 40px;
   }
   ${(props) => props.theme.breakpoints.up('xl')} {
     margin-left: initial;
     text-align: left;
     font-size: 40px;
-    max-width: 450px;
+    max-width: 600px;
+    margin-right: 40px;
   }
 `;
 
 export const Desc = styled.div`
   height: 74.6px;
-  opacity: 0.8;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
   color: #d1e0fb;
   max-width: 461px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    font-size: 20px;
+  }
 `;
 
 export const Grid = styled.div`
@@ -102,7 +113,6 @@ export const Buttons = styled(Button)<{ bgColor?: string; bxShadow?: string; blu
     justify-content: center;
     width: 155px;
     height: 84px;
-    margin-right: 24px;
     border-radius: 12px;
     background: ${({ bgColor }) => bgColor || '#4579f5'};
     box-shadow: ${({ bxShadow }) => bxShadow || 'none'};
@@ -122,14 +132,29 @@ export const Background = styled.div`
   width: 100%;
   background-color: #377dff;
   padding: 0 46px;
-  border-radius:  100px 0 100px 0;
+  border-radius: 300px 0 300px 0;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    justify-content: flex-end;
+    border-radius: 0 300px 0 300px;
+  }
 `;
 
 export const DescDiv = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 28px;
-  ${(props) => props.theme.breakpoints.up('lg')} {
+  align-items: center;
+
+  ${(props) => props.theme.breakpoints.up('md')} {
+    margin-right: 40px;
+    align-items: normal;
+  }
+  ${(props) => props.theme.breakpoints.up('xl')} {
     margin-right: 222px;
   }
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
 `;

@@ -3,14 +3,12 @@ import styled from 'styled-components';
 
 export const Root = styled(StyledPaddingWrapper)`
   position: relative;
-  padding: 0 17px;
   ${(props) => props.theme.breakpoints.up('md')} {
     margin-top: 340px;
   }
 `;
 
 export const Content = styled(PaddingContainer)`
-  width: 100%;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -26,8 +24,8 @@ export const TitleWrapper = styled.div`
   width: 100%;
   background-color: #377dff;
   padding: 0 46px;
-  border-radius: 0 100px 0 100px;
-  ${(props) => props.theme.breakpoints.up('lg')} {
+  border-radius: 0 300px 0 300px;
+  ${(props) => props.theme.breakpoints.up('md')} {
     border-radius: 300px 0 300px 0;
   }
 `;
@@ -53,13 +51,10 @@ export const Title = styled.span`
   ${(props) => props.theme.breakpoints.up('md')} {
     font-size: 30px;
     max-width: 300px;
-  }
-  ${(props) => props.theme.breakpoints.up('lg')} {
     margin-left: 100px;
-    font-size: 40px;
   }
+
   ${(props) => props.theme.breakpoints.up('xl')} {
-    margin-left: 100px;
     font-size: 40px;
     max-width: 450px;
   }
@@ -82,8 +77,15 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 25px;
+  flex-wrap: none;
   ${(props) => props.theme.breakpoints.up('md')} {
     margin-left: 150px;
+    width: 600px;
+    flex-wrap: wrap;
+  }
+  ${(props) => props.theme.breakpoints.up('1690')} {
+    margin-right: 0;
+    width: 80%;
   }
 `;
 
@@ -113,16 +115,23 @@ export const WrappedDesc = styled.span`
 `;
 
 export const ImgWrapper = styled.div`
+  display: none;
   position: absolute;
-  width: 492px;
-  height: 517px;
+  width: auto;
   background-color: #212429;
   border-radius: 20px;
   box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
-  right: 128px;
-  display: none;
+  right: 5vw;
   align-items: flex-end;
+  & svg {
+    height: auto;
+    width: 25vw;
+  }
   ${(props) => props.theme.breakpoints.up('md')} {
     display: flex;
+  }
+
+  ${(props) => props.theme.breakpoints.up('xl')} {
+    height: 517px;
   }
 `;

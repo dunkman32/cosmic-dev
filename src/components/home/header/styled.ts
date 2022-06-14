@@ -13,10 +13,9 @@ export const Content = styled(PaddingContainer)`
   justify-content: space-between;
   margin-top: 50px;
   overflow: hidden;
-  ${(props) => props.theme.breakpoints.up('lg')} {
+  ${(props) => props.theme.breakpoints.up('md')} {
     margin-top: 274px;
   }
-  
 `;
 
 export const TitleWrapper = styled.div`
@@ -40,7 +39,6 @@ export const Title = styled.span`
   }
   ${(props) => props.theme.breakpoints.up('lg')} {
     margin-left: 100px;
-    font-size: 40px;
   }
   ${(props) => props.theme.breakpoints.up('xl')} {
     margin-left: 100px;
@@ -74,10 +72,11 @@ export const ButtonWrapper = styled.div`
   ${(props) => props.theme.breakpoints.up('md')} {
     margin-right: 120px;
     justify-content: initial;
-  } 
+    width: 300px;
+  }
   ${(props) => props.theme.breakpoints.up('lg')} {
+    width: 350px;
     margin-left: 146px;
-    margin-right: 120px;
     justify-content: initial;
   }
 `;
@@ -110,7 +109,7 @@ export const Flex = styled.div`
   width: 100%;
   display: flex;
   ${(props) => props.theme.breakpoints.up('md')} {
-   //position: absolute;
+    //position: absolute;
   }
 `;
 
@@ -123,6 +122,10 @@ export const Card = styled.div`
   box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
   background-image: linear-gradient(138deg, #2d2f33 1%, #272a2e 52%, #222529);
   ${(props) => props.theme.breakpoints.up('xl')} {
+    width: 200px;
+    height: 230px;
+  }
+  ${(props) => props.theme.breakpoints.up('1690')} {
     width: 245px;
     height: 284px;
   }
@@ -138,6 +141,10 @@ export const Icon = styled.div`
   align-items: center;
   justify-content: center;
   ${(props) => props.theme.breakpoints.up('xl')} {
+    width: 70px;
+    height: 70px;
+  }
+  ${(props) => props.theme.breakpoints.up('1690')} {
     width: 96px;
     height: 96px;
   }
@@ -154,6 +161,9 @@ export const CardDesc = styled.div`
   margin-top: 25px;
   max-width: 107px;
   ${(props) => props.theme.breakpoints.up('xl')} {
+    font-size: 16px;
+  }
+  ${(props) => props.theme.breakpoints.up('1690')} {
     font-size: 20px;
     max-width: 207px;
   }
@@ -179,10 +189,9 @@ export const BlueRectangle = styled.div`
   width: 100%;
   background-color: #377dff;
   padding: 0 46px;
-  border-top-left-radius: 300px;
-  border-bottom-right-radius: 300px;
-  ${(props) => props.theme.breakpoints.up('lg')} {
-   border-radius: 0 0 0 150px;
+  border-radius: 300px 0 300px 0;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    border-radius: 0 300px 0 300px;
   }
 `;
 export const LowerBlueRectangle = styled.div`
@@ -192,10 +201,12 @@ export const LowerBlueRectangle = styled.div`
   padding: 0 146px;
   border-bottom-left-radius: 300px;
   border-bottom-right-radius: 300px;
-  height: 128px;
+  height: 100px;
   ${(props) => props.theme.breakpoints.up('md')} {
     display: flex;
-    height: 100px;
+  }
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    height: 128px;
   }
 `;
 
@@ -205,5 +216,36 @@ export const ArrowWrapper = styled.div`
   justify-content: flex-end;
   ${(props) => props.theme.breakpoints.up('md')} {
     display: none;
+  }
+`;
+
+export const AbsoluteBoxes = styled.div`
+  position: absolute;
+  right: 20px;
+  top: 320px;
+  width: 60vw;
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    right: 50px;
+    width: 46vw;
+  }
+  ${(props) => props.theme.breakpoints.up('xl')} {
+    width: 50vw;
+    right: 130px;
+  }
+  ${(props) => props.theme.breakpoints.up('1690')} {
+    top: 280px;
+  }
+`;
+
+export const FloatyBoxes = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px 40px;
+  justify-content: center;
+  ${(props) => props.theme.breakpoints.up('xl')} {
+    gap: 40px;
+  }
+  ${(props) => props.theme.breakpoints.up('1690')} {
+    gap: 23px;
   }
 `;

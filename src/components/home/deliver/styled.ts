@@ -17,7 +17,7 @@ export const TitleWrapper = styled.div`
   width: 100%;
   ${(props) => props.theme.breakpoints.up('md')} {
     background-color: #377dff;
-    border-radius: 300px 0 300px 0;
+    border-radius: 0 300px 0 300px;
   }
 `;
 
@@ -43,14 +43,13 @@ export const Title = styled.span`
   margin: 14px 0;
   ${(props) => props.theme.breakpoints.up('md')} {
     font-size: 30px;
-    max-width: 300px;
+    max-width: 400px;
+    margin-left: 90px;
   }
   ${(props) => props.theme.breakpoints.up('lg')} {
-    margin-left: 100px;
-    font-size: 40px;
+    margin-left: 210px;
   }
   ${(props) => props.theme.breakpoints.up('xl')} {
-    margin-left: 100px;
     font-size: 40px;
     max-width: 500px;
   }
@@ -72,10 +71,13 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 25px;
-  margin-left: 140px;
+  
   ${(props) => props.theme.breakpoints.up('md')} {
     width: 470px;
-    margin-left: 166px;
+    margin-left: 20px;
+  }
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    margin-left: 142px;
   }
 `;
 
@@ -100,7 +102,7 @@ export const WrappedTitle = styled.span`
   margin-bottom: 26px;
 `;
 
-export const WrappedDesc = styled.span`
+export const WrappedDesc = styled.span<{space: boolean}>`
   font-size: 16px;
   font-weight: 500;
   color: #d1e0fb;
@@ -113,16 +115,23 @@ export const WrappedDesc = styled.span`
 `;
 
 export const ImgWrapper = styled.div`
+  display: none;
   position: absolute;
-  height: 517px;
+  width: auto;
   background-color: #212429;
   border-radius: 20px;
   box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
-  right: 300px;
-  display: none;
+  right: 13vw;
   align-items: flex-end;
+  & svg {
+    height: auto;
+    width: 25vw;
+  }
   ${(props) => props.theme.breakpoints.up('md')} {
-    width: 492px;
     display: flex;
+  }
+
+  ${(props) => props.theme.breakpoints.up('xl')} {
+    height: 517px;
   }
 `;

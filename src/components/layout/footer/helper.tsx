@@ -10,7 +10,9 @@ export const socialIcons = [
   },
   {
     id: 2,
-    icon: <InstagramIcon sx={{ width: '38px', height: '38px', fill: '#77838f' }} />,
+    icon: (
+      <InstagramIcon sx={{ width: '38px', height: '38px', fill: '#77838f' }} />
+    ),
   },
   {
     id: 3,
@@ -18,7 +20,11 @@ export const socialIcons = [
   },
   {
     id: 4,
-    icon: <SportsBasketballIcon sx={{ width: '38px', height: '38px', fill: '#77838f' }} />,
+    icon: (
+      <SportsBasketballIcon
+        sx={{ width: '38px', height: '38px', fill: '#77838f' }}
+      />
+    ),
   },
 ];
 
@@ -77,40 +83,10 @@ export const dataOfList = [
   },
   {
     id: 3,
-    title: 'Account',
-    item: [
-      {
-        id: 1,
-        desc: 'Sign Up',
-      },
-      {
-        id: 2,
-        desc: 'Sign In',
-      },
-      {
-        id: 3,
-        desc: 'Forgot Password',
-      },
-    ],
-  },
-  {
-    id: 4,
     title: 'Get Help',
     item: [
       {
         id: 1,
-        desc: 'Developer Help',
-      },
-      {
-        id: 2,
-        desc: 'Docs',
-      },
-      {
-        id: 3,
-        desc: 'Free Training',
-      },
-      {
-        id: 4,
         desc: 'Contact Sales',
       },
     ],
