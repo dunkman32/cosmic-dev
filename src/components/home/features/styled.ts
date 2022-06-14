@@ -1,16 +1,19 @@
-import { PaddingContainer } from '@src/components/shared';
+import { PaddingContainer, StyledPaddingWrapper } from '@src/components/shared';
 import { Button } from '@mui/material';
 import styled from 'styled-components';
+
+export const Container = styled(StyledPaddingWrapper)`
+  margin: 90px 0 90px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    margin: 428px 0 438px;
+  };
+`;
 
 export const Root = styled(PaddingContainer)`
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: start;
-  margin: 90px 0 90px;
-  ${(props) => props.theme.breakpoints.up('md')} {
-    margin: 353px 0 398px;
-  }
 `;
 
 export const ImgWrapper = styled.div`

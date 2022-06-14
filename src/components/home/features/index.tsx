@@ -12,13 +12,14 @@ import {
   Background,
   DescDiv,
   ButtonWrapper,
+  Container,
 } from '@src/components/home/features/styled';
 import { featuresData } from '@src/components/home/features/helper';
 import Partner from '@src/components/shared/icons/partner';
 
 const feature = () => {
   return (
-    <StyledPaddingWrapper>
+    <Container>
       <Root>
         <ImgWrapper>
           <Partner />
@@ -48,7 +49,7 @@ const feature = () => {
           </DescDiv>
         </TextWrapper>
       </Root>
-    </StyledPaddingWrapper>
+    </Container>
   );
 };
 
