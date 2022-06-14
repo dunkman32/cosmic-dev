@@ -20,6 +20,8 @@ import {
   BlueRectangle,
   LowerBlueRectangle,
   LowerWrapper,
+  FloatyBoxes,
+  AbsoluteBoxes,
 } from '@src/components/home/header/styled';
 import { HeadersData } from '@src/components/home/header/helper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -28,9 +30,14 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 const MainsHeader = () => {
-  const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(null);
+  const theme = useTheme();
+  const isUpMd = useMediaQuery(theme.breakpoints.up('md'));
+  const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(
+    null,
+  );
 
   const handleSwipeNext = useCallback(() => {
     if (!swiperInstance) return;
@@ -45,6 +52,18 @@ const MainsHeader = () => {
   return (
     <Root>
       <Content>
+        {isUpMd && (
+          <AbsoluteBoxes>
+            <FloatyBoxes>
+              {HeadersData.map((val) => (
+                <Card key={val.id}>
+                  <Icon>{val.icon}</Icon>
+                  <CardDesc>{val.desc}</CardDesc>
+                </Card>
+              ))}
+            </FloatyBoxes>
+          </AbsoluteBoxes>
+        )}
         <TitleWrapper>
           <Welcome>WELCOME</Welcome>
           <BlueRectangle>
@@ -66,38 +85,40 @@ const MainsHeader = () => {
           <KeyboardArrowLeftIcon onClick={handleSwipePrev} />
           <KeyboardArrowRightIcon onClick={handleSwipeNext} />
         </ArrowWrapper>
-        <Flex>
-          <Swiper
-            spaceBetween={5}
-            onInit={(swiper) => setSwiperInstance(swiper)}
-            breakpoints={{
-              300: {
-                slidesPerView: 2,
-                slidesOffsetBefore: 10,
-                slidesOffsetAfter: 10,
-              },
-              400: {
-                slidesPerView: 2.5,
-                slidesOffsetBefore: 20,
-                slidesOffsetAfter: 20,
-              },
-              600: {
-                slidesPerView: 3,
-                slidesOffsetBefore: 10,
-                slidesOffsetAfter: 10,
-              },
-            }}
-          >
-            {HeadersData.map((val) => (
-              <SwiperSlide key={val.id}>
-                <Card>
-                  <Icon>{val.icon}</Icon>
-                  <CardDesc>{val.desc}</CardDesc>
-                </Card>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </Flex>
+        {!isUpMd && (
+          <Flex>
+            <Swiper
+              spaceBetween={5}
+              onInit={(swiper) => setSwiperInstance(swiper)}
+              breakpoints={{
+                300: {
+                  slidesPerView: 2,
+                  slidesOffsetBefore: 10,
+                  slidesOffsetAfter: 10,
+                },
+                400: {
+                  slidesPerView: 2.5,
+                  slidesOffsetBefore: 20,
+                  slidesOffsetAfter: 20,
+                },
+                600: {
+                  slidesPerView: 3,
+                  slidesOffsetBefore: 10,
+                  slidesOffsetAfter: 10,
+                },
+              }}
+            >
+              {HeadersData.map((val) => (
+                <SwiperSlide key={val.id}>
+                  <Card>
+                    <Icon>{val.icon}</Icon>
+                    <CardDesc>{val.desc}</CardDesc>
+                  </Card>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Flex>
+        )}
       </Content>
     </Root>
   );
