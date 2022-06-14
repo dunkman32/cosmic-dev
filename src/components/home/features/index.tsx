@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyledPaddingWrapper } from '@src/components/shared';
 import {
   Root,
   Desc,
