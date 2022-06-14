@@ -66,7 +66,7 @@ const Partner = () => {
                 slidesOffsetAfter: 10,
               },
               900: {
-                slidesPerView: 3,
+                slidesPerView: 4,
               },
             }}
           >
