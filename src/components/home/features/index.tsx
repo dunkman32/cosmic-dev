@@ -10,39 +10,41 @@ import {
   Buttons,
   Background,
   DescDiv,
-  ButtonWrapper,
   Container,
+  BackgroundWrapper,
 } from '@src/components/home/features/styled';
 import { featuresData } from '@src/components/home/features/helper';
-import Partner from '@src/components/shared/icons/partner';
+import Image from 'next/image';
+import features from '@src/components/shared/images/features.png';
 
 const feature = () => {
   return (
     <Container>
       <Root>
         <ImgWrapper>
-          <Partner />
+          <Image src={features} />
         </ImgWrapper>
         <TextWrapper>
           <Feature>FEATURES</Feature>
-          <Background>
-            <Title>Connect the tools you already use</Title>
-          </Background>
+          <BackgroundWrapper>
+            <Background>
+              <Title>Connect the tools you already use</Title>
+            </Background>
+          </BackgroundWrapper>
           <DescDiv>
             <Desc>
               Our extensive developer tools might also strike your fancy.
             </Desc>
             <Grid>
               {featuresData.map((o) => (
-                <ButtonWrapper key={o.id}>
-                  <Buttons
-                    bgColor={o.backgroundColor}
-                    bxShadow={o.shadow}
-                    blue={o.blue}
-                  >
-                    {o.icon}
-                  </Buttons>
-                </ButtonWrapper>
+                <Buttons
+                  key={o.id}
+                  bgColor={o.backgroundColor}
+                  bxShadow={o.shadow}
+                  blue={o.blue}
+                >
+                  {o.icon}
+                </Buttons>
               ))}
             </Grid>
           </DescDiv>

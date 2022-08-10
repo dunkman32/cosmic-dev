@@ -13,6 +13,7 @@ import {
 } from '@src/components/layout/header/styled';
 import { Navbar } from '@src/components/layout/header/helper';
 import { useState } from 'react';
+import CustomLink from '@src/components/shared/customLink';
 import Menu, { Burger } from './burger';
 
 const MyComponent = () => {
@@ -32,12 +33,12 @@ const MyComponent = () => {
         <List>
           {Navbar.map((val) => (
             <Card key={val.id}>
-              <Desc>{val.desc}</Desc>
+              <CustomLink href={val.link}>
+                <Desc>{val.desc}</Desc>
+              </CustomLink>
             </Card>
           ))}
-          <Button>
-            Contact us
-          </Button>
+          <Button>Contact us</Button>
         </List>
       </Main>
     </Root>

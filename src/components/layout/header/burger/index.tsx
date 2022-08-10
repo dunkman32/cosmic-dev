@@ -20,7 +20,7 @@ export interface StyleProp {
 }
 
 interface MenuProps extends StyleProp {
-    setOpen: (_arg0: boolean) => void;
+  setOpen: (_arg0: boolean) => void;
 }
 
 const Menu = ({ open, setOpen }: MenuProps) => {
@@ -32,16 +32,16 @@ const Menu = ({ open, setOpen }: MenuProps) => {
     }
   }, [open]);
 
-  const Links = useMemo(
-    () => [
-      {
-        desc: 'home',
-        id: '/',
-      },
-      ...Navbar,
-    ],
-    [],
-  );
+  // const Links = useMemo(
+  //   () => [
+  //     {
+  //       desc: 'home',
+  //       id: '/',
+  //     },
+  //     ...Navbar,
+  //   ],
+  //   [],
+  // );
   return (
     <StyledMenu open={open}>
       <div>
@@ -54,12 +54,10 @@ const Menu = ({ open, setOpen }: MenuProps) => {
           </WrapHeader>
         </WrapHeader>
         <NavItemsWrapper>
-          {Links.map((val) => (
+          {Navbar.map((val) => (
             <div key={val.id}>
-              <CustomLink href="/">
-                <NavItemText
-                  onClick={() => setOpen(false)}
-                >
+              <CustomLink href={val.link}>
+                <NavItemText onClick={() => setOpen(false)}>
                   {val.desc}
                 </NavItemText>
               </CustomLink>
@@ -88,11 +86,7 @@ const Menu = ({ open, setOpen }: MenuProps) => {
 
 export const Burger = ({ open, setOpen }: MenuProps) => (
   <StyledBurger onClick={() => setOpen(!open)}>
-    {open ? (
-      <Close />
-    ) : (
-      <MobileMenu />
-    )}
+    {open ? <Close /> : <MobileMenu />}
   </StyledBurger>
 );
 

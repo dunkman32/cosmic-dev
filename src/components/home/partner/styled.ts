@@ -7,9 +7,10 @@ export const Root = styled(PaddingContainer)`
     margin : 90px 0 90px;
     align-items: center;
     justify-content: center;
-    gap: 70px;
+    gap: 36px;
   ${(props) => props.theme.breakpoints.up('md')} {
     margin : 350px 0 179px;
+    gap: 70px;
   }
 `;
 

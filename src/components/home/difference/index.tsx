@@ -1,17 +1,14 @@
 import React from 'react';
-import SectionOne from '@src/components/shared/icons/difflerence';
 import {
   Root,
   Title,
   Content,
   TitleWrapper,
-  Caption,
   Desc,
   Wrapper,
   WrappedTitle,
   WrappedDesc,
   ProjectsWrapper,
-  ImgWrapper,
 } from './styled';
 
 const data = [
@@ -33,14 +30,14 @@ const Difference = () => {
   return (
     <Root>
       <Content>
-        <Caption>FEATURES</Caption>
         <TitleWrapper>
           <Title>Our people make the difference.</Title>
         </TitleWrapper>
-        <Desc>
-          At any time, you can contact our support center for help, because we won over 100 clients.
-        </Desc>
         <ProjectsWrapper>
+          <Desc>
+            At any time, you can contact our support center for help, because we
+            won over 100 clients.
+          </Desc>
           {data.map(({ num, text }) => (
             <Wrapper key={num}>
               <WrappedTitle>{num}</WrappedTitle>
@@ -48,9 +45,6 @@ const Difference = () => {
             </Wrapper>
           ))}
         </ProjectsWrapper>
-        <ImgWrapper>
-          <SectionOne />
-        </ImgWrapper>
       </Content>
     </Root>
   );

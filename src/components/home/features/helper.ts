@@ -3,7 +3,7 @@ export const featuresData = [
     id: 1,
     icon: 'Slack',
     Link: '/',
-    shadow: '0 30px 40px 0 rgba(55, 125, 255, 0.18)',
+    shadow: '0px 30px 40px 0 rgba(55, 125, 255, 0.18);',
     blue: true,
   },
   {

@@ -1,4 +1,6 @@
-import { PaddingContainer, StyledButton, StyledPaddingWrapper } from '@src/components/shared';
+import {
+  baseBlue, PaddingContainer, StyledButton, StyledPaddingWrapper,
+} from '@src/components/shared';
 import styled from 'styled-components';
 
 export const Root = styled(StyledPaddingWrapper)`
@@ -22,6 +24,9 @@ export const Main = styled(PaddingContainer)`
   ${(props) => props.theme.breakpoints.up('md')} {
     height: 117px;
   }
+  ${(props) => props.theme.breakpoints.up('xl')} {
+    margin: 0 150px;
+  }
 `;
 
 export const Logo = styled.span`
@@ -35,7 +40,8 @@ export const Logo3 = styled(Logo)`
 
 export const LogoWrapper = styled.div`
   display: none;
-  background: #377dff;
+  align-self: flex-start;
+  background: ${baseBlue};
   border-radius:0 0 80px 80px;
   padding: 40px;
   gap: 5px;
@@ -63,6 +69,7 @@ export const Desc = styled.div`
   color: #d1e0fb;
   opacity: 0.8;
   font-weight: 600;
+  cursor: pointer;
 `;
 
 export const Button = styled(StyledButton)`

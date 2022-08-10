@@ -1,4 +1,4 @@
-import { PaddingContainer, StyledPaddingWrapper } from '@src/components/shared';
+import { baseBlue, PaddingContainer, StyledPaddingWrapper } from '@src/components/shared';
 import styled from 'styled-components';
 
 export const Root = styled(StyledPaddingWrapper)`
@@ -15,21 +15,23 @@ export const Content = styled(PaddingContainer)`
 export const TitleWrapper = styled.div`
   display: flex;
   width: 100%;
+  border-radius: 300px 300px 0 0;
   ${(props) => props.theme.breakpoints.up('md')} {
-    background-color: #377dff;
-    border-radius: 0 300px 0 300px;
+    width: 88%;
+    background-color: ${baseBlue};
+    border-radius: 300px 0 300px 0;
   }
 `;
 
 export const Caption = styled.span`
   color: #4579f5;
-  margin: 19px 0;
+  margin: 2px 0;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.85;
   letter-spacing: 1px;
   ${(props) => props.theme.breakpoints.up('md')} {
-    margin-left: 123px;
+    margin: 19px 123px;
   }
 `;
 
@@ -40,10 +42,11 @@ export const Title = styled.span`
   text-align: left;
   color: #fff;
   max-width: 450px;
-  margin: 14px 0;
+  margin: 14px 0 0;
   ${(props) => props.theme.breakpoints.up('md')} {
     font-size: 30px;
     max-width: 400px;
+    margin: 14px 0;
     margin-left: 90px;
   }
   ${(props) => props.theme.breakpoints.up('lg')} {
@@ -71,7 +74,7 @@ export const ProjectsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 25px;
-  
+
   ${(props) => props.theme.breakpoints.up('md')} {
     width: 470px;
     margin-left: 20px;
@@ -84,12 +87,27 @@ export const ProjectsWrapper = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    margin-bottom: 28px;
+  }
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    margin-bottom: 32px;
+  }
 `;
 
 export const LeftWrapper = styled.div`
-  margin-right: 20px;
+  margin-right: 8px;
   margin-top: 20px;
+  & svg {
+    height: 40px;
+  }
+  ${(props) => props.theme.breakpoints.up('md')} {
+    margin-right: 20px;
+    & svg {
+      height: 52px;
+    }
+  }
 `;
 export const RightWrapper = styled.div`
   display: flex;
@@ -97,41 +115,49 @@ export const RightWrapper = styled.div`
 `;
 
 export const WrappedTitle = styled.span`
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 26px;
+  margin-bottom: 12px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    font-size: 22px;
+  }
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    font-size: 25px;
+    margin-bottom: 26px;
+  }
 `;
 
-export const WrappedDesc = styled.span<{space: boolean}>`
+export const WrappedDesc = styled.span<{ space: boolean }>`
   font-size: 16px;
   font-weight: 500;
   color: #d1e0fb;
   line-height: 1.5;
-  margin-left: ${({ space }) => (space ? '0' : '72px')};
+  margin-left: ${({ space }) => (space ? '0' : '62px')};
   ${(props) => props.theme.breakpoints.up('md')} {
-    width: 450px;
+    width: 400px;
+    font-size: 18px;
+    margin-left: ${({ space }) => (space ? '0' : '72px')};
+  }
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    width: 420px;
+  }
+  ${(props) => props.theme.breakpoints.up('xl')} {
     font-size: 20px;
+    width: 450px;
   }
 `;
 
 export const ImgWrapper = styled.div`
   display: none;
+  align-items: center;
   position: absolute;
-  width: auto;
-  background-color: #212429;
+  right: 50px;
+  bottom: 130px;
+  width: 40vw;
+  max-width: 956px;
+  height: 100%;
   border-radius: 20px;
-  box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
-  right: 13vw;
-  align-items: flex-end;
-  & svg {
-    height: auto;
-    width: 25vw;
-  }
   ${(props) => props.theme.breakpoints.up('md')} {
     display: flex;
-  }
-
-  ${(props) => props.theme.breakpoints.up('xl')} {
-    height: 517px;
   }
 `;

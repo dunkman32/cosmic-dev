@@ -12,7 +12,6 @@ import {
   Button,
   Content,
   CardDesc,
-  Welcome,
   TitleWrapper,
   ArrowWrapper,
   ButtonWrapper,
@@ -65,10 +64,52 @@ const MainsHeader = () => {
           </AbsoluteBoxes>
         )}
         <TitleWrapper>
-          <Welcome>WELCOME</Welcome>
           <BlueRectangle>
             <Title>Ready to Help you in your projects!</Title>
           </BlueRectangle>
+          <ArrowWrapper>
+            <KeyboardArrowLeftIcon onClick={handleSwipePrev} />
+            <KeyboardArrowRightIcon onClick={handleSwipeNext} />
+          </ArrowWrapper>
+          {!isUpMd && (
+            <Flex>
+              <Swiper
+                spaceBetween={5}
+                onInit={(swiper) => setSwiperInstance(swiper)}
+                breakpoints={{
+                  300: {
+                    slidesPerView: 2,
+                    slidesOffsetBefore: 10,
+                    slidesOffsetAfter: 10,
+                  },
+                  400: {
+                    slidesPerView: 2.5,
+                    slidesOffsetBefore: 20,
+                    slidesOffsetAfter: 20,
+                  },
+                  600: {
+                    slidesPerView: 3,
+                    slidesOffsetBefore: 10,
+                    slidesOffsetAfter: 10,
+                  },
+                  680: {
+                    slidesPerView: 4,
+                    slidesOffsetBefore: 10,
+                    slidesOffsetAfter: 10,
+                  },
+                }}
+              >
+                {HeadersData.map((val) => (
+                  <SwiperSlide key={val.id}>
+                    <Card>
+                      <Icon>{val.icon}</Icon>
+                      <CardDesc>{val.desc}</CardDesc>
+                    </Card>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </Flex>
+          )}
           <Desc>
             Our sales team will get in touch to better understand your needs,
             and will help you with the sign-up process
@@ -81,44 +122,6 @@ const MainsHeader = () => {
             <LowerBlueRectangle />
           </LowerWrapper>
         </TitleWrapper>
-        <ArrowWrapper>
-          <KeyboardArrowLeftIcon onClick={handleSwipePrev} />
-          <KeyboardArrowRightIcon onClick={handleSwipeNext} />
-        </ArrowWrapper>
-        {!isUpMd && (
-          <Flex>
-            <Swiper
-              spaceBetween={5}
-              onInit={(swiper) => setSwiperInstance(swiper)}
-              breakpoints={{
-                300: {
-                  slidesPerView: 2,
-                  slidesOffsetBefore: 10,
-                  slidesOffsetAfter: 10,
-                },
-                400: {
-                  slidesPerView: 2.5,
-                  slidesOffsetBefore: 20,
-                  slidesOffsetAfter: 20,
-                },
-                600: {
-                  slidesPerView: 3,
-                  slidesOffsetBefore: 10,
-                  slidesOffsetAfter: 10,
-                },
-              }}
-            >
-              {HeadersData.map((val) => (
-                <SwiperSlide key={val.id}>
-                  <Card>
-                    <Icon>{val.icon}</Icon>
-                    <CardDesc>{val.desc}</CardDesc>
-                  </Card>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </Flex>
-        )}
       </Content>
     </Root>
   );

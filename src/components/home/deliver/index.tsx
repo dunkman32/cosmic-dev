@@ -1,7 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
-import Delivers from '@src/components/shared/icons/deliver';
 import { data } from '@src/components/home/deliver/helper';
+import deliverImg from '@src/components/shared/images/deliver.png';
+import Image from 'next/image';
 import {
   Root,
   Title,
@@ -39,7 +40,7 @@ const Deliver = () => {
           ))}
         </ProjectsWrapper>
         <ImgWrapper>
-          <Delivers />
+          <Image src={deliverImg} />
         </ImgWrapper>
       </Content>
     </Root>

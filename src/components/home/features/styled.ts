@@ -1,65 +1,72 @@
-import { PaddingContainer, StyledPaddingWrapper } from '@src/components/shared';
+import { baseBlue, PaddingContainer, StyledPaddingWrapper } from '@src/components/shared';
 import { Button } from '@mui/material';
 import styled from 'styled-components';
 
 export const Container = styled(StyledPaddingWrapper)`
-  margin: 90px 0 90px;
+  margin: 70px 0 50px;
+  height: 500px;
   ${(props) => props.theme.breakpoints.up('md')} {
-    margin: 428px 0 438px;
-  };
+    margin: 250px 0;
+    height: 600px;
+  }
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    margin: 80px 0 280px;
+    height: 700px;
+  }
+  ${(props) => props.theme.breakpoints.up('xl')} {
+    margin: 200px 0 400px;
+  } ;
 `;
 
 export const Root = styled(PaddingContainer)`
   position: relative;
   display: flex;
-  justify-content: flex-end;
-  align-items: start;
 `;
 
 export const ImgWrapper = styled.div`
   position: absolute;
-  left: 5vw;
-  width: auto;
-  background-color: #212429;
-  border-radius: 20px;
-  box-shadow: 8px 8px 24px 0 rgba(9, 14, 20, 0.4);
+  left: 0px;
+  top: 100px;
+  align-items: center;
+  width: 45vw;
+  height: 100%;
   display: none;
-  align-items: flex-end;
-  & svg {
-    height: auto;
-    width: 25vw;
-  }
   ${(props) => props.theme.breakpoints.up('md')} {
     display: flex;
-  }
-  ${(props) => props.theme.breakpoints.up('xl')} {
-    height: 517px;
+    margin-left: 10px;
   }
 `;
 
 export const TextWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  gap: 28px;
   width: 100%;
+  margin-top: 20px;
   ${(props) => props.theme.breakpoints.up('md')} {
-    align-items: flex-end;
+    margin-top: 270px;
   }
-  //max-width: 461px;
 `;
 
 export const Feature = styled.div`
+  display: none;
   height: 16px;
+  width: 100%;
   font-size: 13px;
   font-weight: 600;
   line-height: 1.85;
   letter-spacing: 1px;
-  text-align: right;
+  text-align: center;
   color: #4579f5;
-  max-width: 461px;
+  margin-right: 0px;
+  margin-bottom: 16px;
   ${(props) => props.theme.breakpoints.up('md')} {
-    margin-right: 222px;
+    display: block;
+    margin-right: 100px;
+    text-align: right;
+  }
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    padding-right: 130px;
+  }
+  ${(props) => props.theme.breakpoints.up('xl')} {
+    padding-right: 222px;
   }
 `;
 
@@ -67,37 +74,43 @@ export const Title = styled.div`
   font-size: 25px;
   font-weight: bold;
   line-height: 1.23;
-  text-align: left;
   color: #fff;
   max-width: 450px;
-  margin: 14px 0;
+  text-align: center;
   ${(props) => props.theme.breakpoints.up('md')} {
-    font-size: 30px;
+    font-size: 28px;
     max-width: 300px;
-    margin-right: 150px;
+    text-align: left;
   }
   ${(props) => props.theme.breakpoints.up('lg')} {
-    margin-left: 100px;
+    font-size: 32px;
+    max-width: 380px;
   }
   ${(props) => props.theme.breakpoints.up('xl')} {
-    margin-left: initial;
     text-align: left;
     font-size: 40px;
-    max-width: 600px;
-    margin-right: 40px;
+    margin-right: 100px;
+    max-width: 461px;
   }
 `;
 
 export const Desc = styled.div`
-  height: 74.6px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
   color: #d1e0fb;
-  max-width: 461px;
+  opacity: 0.8;
   ${(props) => props.theme.breakpoints.up('md')} {
+    max-width: 344px;
+  }
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    max-width: 420px;
+    font-size: 18px;
+  }
+  ${(props) => props.theme.breakpoints.up('xl')} {
     font-size: 20px;
+    max-width: 500px;
   }
 `;
 
@@ -105,23 +118,22 @@ export const Grid = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-row-gap: 25px;
-  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 25px;
+  grid-template-rows: 50% 50%;
 `;
 
 export const Buttons = styled(Button)<{ bgColor?: string; bxShadow?: string; blue?: boolean }>`
   &&& {
     color: white;
     display: flex;
-    align-items: center;
-    justify-content: center;
     width: 155px;
     height: 84px;
     border-radius: 12px;
-    background: ${({ bgColor }) => bgColor || '#4579f5'};
+    background: ${({ bgColor }) => bgColor || baseBlue};
     box-shadow: ${({ bxShadow }) => bxShadow || 'none'};
     cursor: pointer;
     &:hover {
-      background: ${({ blue }) => (blue ? '#4579f5' : 'none')};
+      background: ${({ blue }) => (blue ? baseBlue : 'none')};
     }
     ${(props) => props.theme.breakpoints.up('lg')} {
       width: 205px;
@@ -130,15 +142,34 @@ export const Buttons = styled(Button)<{ bgColor?: string; bxShadow?: string; blu
   }
 `;
 
+export const BackgroundWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    justify-content: flex-end;
+    margin-bottom: 0px;
+  }
+`;
+
 export const Background = styled.div`
   display: flex;
   width: 100%;
-  background-color: #377dff;
-  padding: 0 46px;
-  border-radius: 300px 0 300px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: ${baseBlue};
+  padding: 0 20px;
+  border-radius: 300px 300px 0 0;
+  min-height: 100px;
   ${(props) => props.theme.breakpoints.up('md')} {
-    justify-content: flex-end;
     border-radius: 0 300px 0 300px;
+    padding: 0 120px;
+    height: 100px;
+    width: 70%;
+    justify-content: flex-end;
+  }
+  ${(props) => props.theme.breakpoints.up('xl')} {
+    height: 128px;
   }
 `;
 
@@ -149,15 +180,15 @@ export const DescDiv = styled.div`
   align-items: center;
 
   ${(props) => props.theme.breakpoints.up('md')} {
-    margin-right: 40px;
-    align-items: normal;
+    margin-right: 78px;
+    margin-top: 24px;
+    align-items: flex-end;
   }
   ${(props) => props.theme.breakpoints.up('xl')} {
-    margin-right: 222px;
+    margin-right: 180px;
   }
 `;
 
 export const ButtonWrapper = styled.div`
   display: flex;
-  justify-content: center;
 `;
