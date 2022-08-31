@@ -94,6 +94,7 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 80vw;
   margin-bottom: 30px;
+  cursor: pointer;
   ${(props) => props.theme.breakpoints.up('sm')} {
     margin-bottom: 24px;
     width: 42vw;

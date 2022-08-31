@@ -10,7 +10,7 @@ import {
 import { StyledButton } from '@src/components/shared';
 import CustomLink from '@src/components/shared/customLink';
 import { Navbar } from '@src/components/layout/header/helper';
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Close from '@src/components/shared/icons/colse';
 import MobileMenu from '@src/components/shared/icons/mobileMenu';

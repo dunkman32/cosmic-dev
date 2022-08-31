@@ -62,6 +62,7 @@ export const Title = styled.div`
     border-radius: 0 300px 0 300px;
     padding-left: 80px;
     height: 100px;
+    justify-content: left
   }
   ${(props) => props.theme.breakpoints.up('xl')} {
     font-size: 60px;
