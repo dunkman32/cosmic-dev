@@ -21,7 +21,6 @@ export const ImgWrapper = styled.div`
     display: block;
     margin-left: 70px;
   }
-  
 `;
 
 export const Title = styled.div`
