@@ -13,11 +13,11 @@ import {
 
 const data = [
   {
-    num: '50+',
+    num: '20+',
     text: 'Complete Projects',
   },
   {
-    num: '17',
+    num: '12',
     text: 'Team Members',
   },
   {
@@ -31,12 +31,11 @@ const Difference = () => {
     <Root>
       <Content>
         <TitleWrapper>
-          <Title>Our people make the difference.</Title>
+          <Title>Superb services to diverse industries</Title>
         </TitleWrapper>
         <ProjectsWrapper>
           <Desc>
-            At any time, you can contact our support center for help, because we
-            won over 100 clients.
+            We provide you with a wide range of services and tech stack to fully adjust to your needs
           </Desc>
           {data.map(({ num, text }) => (
             <Wrapper key={num}>

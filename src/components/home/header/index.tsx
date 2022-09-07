@@ -65,7 +65,7 @@ const MainsHeader = () => {
         )}
         <TitleWrapper>
           <BlueRectangle>
-            <Title>Ready to Help you in your projects!</Title>
+            <Title>Convert your ideas into software!</Title>
           </BlueRectangle>
           <ArrowWrapper>
             <KeyboardArrowLeftIcon onClick={handleSwipePrev} />
@@ -111,8 +111,8 @@ const MainsHeader = () => {
             </Flex>
           )}
           <Desc>
-            Our sales team will get in touch to better understand your needs,
-            and will help you with the sign-up process
+          Our goal is to bring your ideas to life
+          and help you develop your business successfully
           </Desc>
           <LowerWrapper>
             <ButtonWrapper>

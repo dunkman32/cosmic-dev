@@ -28,6 +28,6 @@ export const HeadersData = [
   {
     id: 5,
     icon: <MessageIcon />,
-    desc: 'Machine Learning/AI',
+    desc: 'IT Security',
   },
 ];

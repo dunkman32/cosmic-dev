@@ -33,7 +33,7 @@ const feature = () => {
           </BackgroundWrapper>
           <DescDiv>
             <Desc>
-              Our extensive developer tools might also strike your fancy.
+              Maintain stability and keep a balanced development process with our extensive developer tools
             </Desc>
             <Grid>
               {featuresData.map((o) => (

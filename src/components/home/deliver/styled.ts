@@ -4,6 +4,17 @@ import styled from 'styled-components';
 export const Root = styled(StyledPaddingWrapper)`
   position: relative;
   padding: 0 17px;
+  ${(props) => props.theme.breakpoints.up('md')} {
+    margin: 250px 0;
+    height: 600px;
+  }
+  ${(props) => props.theme.breakpoints.up('lg')} {
+    margin: 80px 0 280px;
+    height: 700px;
+  }
+  ${(props) => props.theme.breakpoints.up('xl')} {
+    margin: 200px 0 400px;
+  } ;
 `;
 
 export const Content = styled(PaddingContainer)`
