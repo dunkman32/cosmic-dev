@@ -20,7 +20,7 @@ const List = () => {
             <Wrapper>
               <Title>{o.title}</Title>
               <ImgWrapper>
-                <Image src={o.icon} />
+                <Image style={{ objectFit: 'cover', maxHeight: 300 }} src={o.icon} />
               </ImgWrapper>
               <Desc>{o.text}</Desc>
             </Wrapper>

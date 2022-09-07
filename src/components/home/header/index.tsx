@@ -34,9 +34,7 @@ import { useMediaQuery, useTheme } from '@mui/material';
 const MainsHeader = () => {
   const theme = useTheme();
   const isUpMd = useMediaQuery(theme.breakpoints.up('md'));
-  const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(
-    null,
-  );
+  const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(null);
 
   const handleSwipeNext = useCallback(() => {
     if (!swiperInstance) return;
@@ -111,8 +109,7 @@ const MainsHeader = () => {
             </Flex>
           )}
           <Desc>
-          Our goal is to bring your ideas to life
-          and help you develop your business successfully
+            Our goal is to bring your ideas to life and help you develop your business successfully
           </Desc>
           <LowerWrapper>
             <ButtonWrapper>

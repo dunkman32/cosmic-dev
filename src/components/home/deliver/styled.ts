@@ -13,7 +13,7 @@ export const Root = styled(StyledPaddingWrapper)`
     height: 700px;
   }
   ${(props) => props.theme.breakpoints.up('xl')} {
-    margin: 200px 0 400px;
+    margin: 300px 0;
   } ;
 `;
 

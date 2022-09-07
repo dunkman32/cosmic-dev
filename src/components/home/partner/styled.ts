@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import { PaddingContainer } from '@src/components/shared';
 
 export const Root = styled(PaddingContainer)`
-    display: flex;
-    flex-direction: column;
-    margin : 90px 0 90px;
-    align-items: center;
-    justify-content: center;
-    gap: 36px;
+  display: flex;
+  flex-direction: column;
+  margin: 90px 0 90px;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
   ${(props) => props.theme.breakpoints.up('md')} {
-    margin : 350px 0 179px;
+    margin: 0 0 179px;
     gap: 70px;
   }
 `;
@@ -51,7 +51,15 @@ export const List = styled.div`
   justify-content: center;
   height: 120px;
   border-radius: 12px;
-  background-image: linear-gradient(95deg, #222529, #272a2f 20%, #2a2d31 38%, #2a2c31 58%, #272a2f 80%, #222529);
+  background-image: linear-gradient(
+    95deg,
+    #222529,
+    #272a2f 20%,
+    #2a2d31 38%,
+    #2a2c31 58%,
+    #272a2f 80%,
+    #222529
+  );
   ${(props) => props.theme.breakpoints.up('md')} {
     width: 100%;
     gap: 67px;
@@ -61,7 +69,7 @@ export const Card = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height:100px;
+  height: 100px;
 `;
 
 export const ArrowWrapper = styled.div`

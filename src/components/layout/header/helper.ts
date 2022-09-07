@@ -14,9 +14,9 @@ export const Navbar = [
     desc: 'Team',
     link: '/team',
   },
-  {
-    id: 4,
-    desc: 'Clients',
-    link: '/clients',
-  },
+  // {
+  //   id: 4,
+  //   desc: 'Clients',
+  //   link: '/clients',
+  // },
 ];

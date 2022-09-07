@@ -9,30 +9,53 @@ import {
   Container,
   Wrapper,
   List,
-  Icon,
 } from '@src/components/projects/projectPage/styled';
 import Image from 'next/image';
-import placeholder from '@src/components/shared/images/placeholder.jpg';
-import { socialIcons } from '@src/components/layout/footer/helper';
-
-const text =
-  'Our sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up processOur sales team will get in touch to better understand your needs, and will help you with the sign-up process';
+import { useRouter } from 'next/router';
+import { data } from '@src/components/projects/projects/helper';
+import LinkIcon from '@mui/icons-material/Link';
+import { IconButton } from '@mui/material';
+import Link from 'next/link';
+import rebank from '@src/components/shared/images/rebank.png';
 
 const ProjectPage = () => {
+  const router = useRouter();
+  const project = data.find((el) => el.id === Number(router.query.id))! || {
+    id: 1,
+    icon: rebank,
+    title: 'RE|BANK',
+    text: 'Re|Bank is a sub-brand of Pasha Bank, whose goal is to offer simplified products to customers.',
+    link: 'https://rebank.ge/en',
+  };
   return (
     <Container>
       <Root>
         <Wrapper>
-          <Title>RE BANK</Title>
+          <Title>{project.title}</Title>
           <ImgWrapper>
-            <Image src={placeholder} layout="responsive" />
+            <Image src={project.icon} layout="responsive" />
           </ImgWrapper>
           <List>
-            {socialIcons.map((val) => (
-              <Icon key={val.id}>{val.icon}</Icon>
-            ))}
+            <Link href={project.link}>
+              <a target="_blank" rel="noopener noreferrer">
+                <IconButton>
+                  <LinkIcon
+                    sx={{
+                      width: '38px',
+                      height: '38px',
+                      fill: '#77838f',
+                      cursor: 'pointer',
+                    }}
+                  />
+                </IconButton>
+              </a>
+            </Link>
+
+            {/* {socialIcons.map((val) => ( */}
+            {/*  <Icon key={val.id}>{val.icon}</Icon> */}
+            {/* ))} */}
           </List>
-          <Desc>{text}</Desc>
+          <Desc>{project.text}</Desc>
         </Wrapper>
       </Root>
     </Container>

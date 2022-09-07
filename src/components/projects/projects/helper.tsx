@@ -1,35 +1,44 @@
 /* eslint-disable max-len */
-import placeholder from '@src/components/shared/images/placeholder.jpg';
+import neolet from '@src/components/shared/images/neolet.jpg';
+import uncia from '@src/components/shared/images/uncia.png';
+import rebank from '@src/components/shared/images/rebank.png';
+import affix from '@src/components/shared/images/affix.png';
+import ouchi from '@src/components/shared/images/ouchi.png';
 
 export const data = [
   {
     id: 1,
-    icon: placeholder,
-    title: 'RE BANK',
-    text: 'Our sales team will get in touch to better understand your needs, and will help you with the sign-up process',
+    icon: rebank,
+    title: 'RE|BANK',
+    text: 'Re|Bank is a sub-brand of Pasha Bank, whose goal is to offer simplified products to customers.',
+    link: 'https://rebank.ge/en',
   },
   {
     id: 2,
-    icon: placeholder,
-    title: 'RE BANK',
-    text: 'Our sales team will get in touch to better understand your needs, and will help you with the sign-up process',
+    icon: neolet,
+    title: 'Neolet',
+    text: "Neollet is a payment service provider registered by the National Bank and has been operating under the relevant legislation since July 11, 2018. The company stands out in the payment services market with high quality services, high-tech solutions and innovative business processes. The customer is a central part of Neollet's business, which is well reflected in the company's development strategy. ",
+    link: 'https://neollet.com/en',
   },
   {
     id: 3,
-    icon: placeholder,
-    title: 'RE BANK',
-    text: 'Our sales team will get in touch to better understand your needs, and will help you with the sign-up process',
+    icon: uncia,
+    title: 'Uncia',
+    text: 'Login to your Uncia account to manage your projects',
+    link: 'https://uncia.itstartechs.com/',
   },
   {
     id: 4,
-    icon: placeholder,
-    title: 'RE BANK',
-    text: 'Our sales team will get in touch to better understand your needs, and will help you with the sign-up process',
+    icon: affix,
+    title: 'Affix',
+    text: 'Independent competitive gaming E-Platform for online multiplayer PvP gamers. The aim is to further the e-sports ecosystem by offering players of all levels the chance to compete in a competitive environment with their favourite games in exchange to monthly membership fee.',
+    link: 'https://affix.net/en/',
   },
   {
     id: 5,
-    icon: placeholder,
-    title: 'RE BANK',
-    text: 'Our sales team will get in touch to better understand your needs, and will help you with the sign-up process',
+    icon: ouchi,
+    title: 'Ouchi Finance',
+    text: "Ouchi Finance aims to make people's concept of living, renting, and staying easier and more automatic. We provides user-friendly NFT platform and DEX functions (Swap, Liquidity, etc.) to realize the goal.",
+    link: 'https://app.ouchi.finance/#/home',
   },
 ];
