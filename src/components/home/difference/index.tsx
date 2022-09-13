@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import {
   Root,
   Title,
@@ -35,11 +36,14 @@ const Difference = () => {
         </TitleWrapper>
         <ProjectsWrapper>
           <Desc>
-            We provide you with a wide range of services and tech stack to fully adjust to your needs
+            We provide you with a wide range of services and tech stack to fully adjust to your
+            needs
           </Desc>
           {data.map(({ num, text }) => (
             <Wrapper key={num}>
-              <WrappedTitle>{num}</WrappedTitle>
+              <ScrollAnimation duration={1} animateIn="fadeIn" animatePreScroll={false} animateOnce>
+                <WrappedTitle>{num}</WrappedTitle>
+              </ScrollAnimation>
               <WrappedDesc>{text}</WrappedDesc>
             </Wrapper>
           ))}

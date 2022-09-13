@@ -6,6 +6,8 @@ import { createTheme, CssBaseline } from '@mui/material';
 import { ThemeProvider as SCThemeProvider, ThemeProvider } from 'styled-components';
 import Provider from '@src/components/provider';
 import { GlobalStyle } from '@src/components/shared/globalStyled';
+// eslint-disable-next-line import/no-unresolved
+// import 'animate.css/animate.min.css';
 
 export interface AppPropsWithLayout extends AppProps {
   Component: NextPage & {
@@ -22,6 +24,10 @@ function MyApp({ Component, pageProps, ...props }: AppPropsWithLayout) {
         <GlobalStyle />
         <Provider Component={Component} pageProps={pageProps} {...props} />
       </SCThemeProvider>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      />
     </ThemeProvider>
   );
 }

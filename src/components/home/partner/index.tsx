@@ -38,7 +38,7 @@ const Partner = () => {
       <Root>
         <TitleWrapper>
           <Title>PARTNER</Title>
-          <Desc>Trusted by more than 5,000 businesses in 122 countries.</Desc>
+          <Desc>Trusted by more than 10 businesses in 5 countries.</Desc>
         </TitleWrapper>
         <ArrowWrapper>
           <KeyboardArrowLeftIcon onClick={handleSwipePrev} />
@@ -72,9 +72,7 @@ const Partner = () => {
           >
             {PartnersData.map((val) => (
               <SwiperSlide key={val.id}>
-                <Card>
-                  {val.svg}
-                </Card>
+                <Card>{val.svg}</Card>
               </SwiperSlide>
             ))}
           </Swiper>

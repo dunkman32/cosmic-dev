@@ -3,6 +3,7 @@ import React from 'react';
 import { data } from '@src/components/home/deliver/helper';
 import deliverImg from '@src/components/shared/images/deliver.png';
 import Image from 'next/image';
+import ScrollAnimation from 'react-animate-on-scroll';
 import {
   Root,
   Title,
@@ -30,13 +31,21 @@ const Deliver = () => {
           {data.map(({
             icon, title, text, id,
           }) => (
-            <Wrapper key={id}>
-              {icon && <LeftWrapper>{icon}</LeftWrapper>}
-              <RightWrapper>
-                {title && <WrappedTitle>{title}</WrappedTitle>}
-                <WrappedDesc space={Boolean(icon)}>{text}</WrappedDesc>
-              </RightWrapper>
-            </Wrapper>
+            <ScrollAnimation
+              duration={Number(id * 1)}
+              animateIn="fadeIn"
+              animatePreScroll={false}
+              animateOnce
+              key={id}
+            >
+              <Wrapper key={id}>
+                {icon && <LeftWrapper>{icon}</LeftWrapper>}
+                <RightWrapper>
+                  {title && <WrappedTitle>{title}</WrappedTitle>}
+                  <WrappedDesc space={Boolean(icon)}>{text}</WrappedDesc>
+                </RightWrapper>
+              </Wrapper>
+            </ScrollAnimation>
           ))}
         </ProjectsWrapper>
         <ImgWrapper>
