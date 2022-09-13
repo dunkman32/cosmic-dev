@@ -14,16 +14,20 @@ import {
 
 const data = [
   {
-    num: '20+',
+    num: '20 +',
     text: 'Complete Projects',
   },
   {
-    num: '12',
-    text: 'Team Members',
+    num: '5 +',
+    text: 'Years of experience as a team',
   },
   {
-    num: '10.550.000',
-    text: 'Lines of Code Written',
+    num: '12',
+    text: 'Team Members and growing up fast',
+  },
+  {
+    num: '51 +',
+    text: 'Total years of experience in high level programming languages',
   },
 ];
 

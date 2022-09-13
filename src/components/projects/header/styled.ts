@@ -26,7 +26,7 @@ export const ImgWrapper = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
   line-height: 1.23;
   color: #fff;
@@ -39,7 +39,7 @@ export const Title = styled.div`
   }
 
   ${(props) => props.theme.breakpoints.up('xl')} {
-    font-size: 60px;
+    font-size: 42px;
   }
 `;
 

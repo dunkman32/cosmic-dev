@@ -17,7 +17,12 @@ const Header = ({ scrollTo }: { scrollTo: any }) => {
           <Image src={projects} />
         </ImgWrapper>
         <Background>
-          <Title>Projects!</Title>
+          <Title>
+            Our
+            {" team's"}
+            {' '}
+            experience
+          </Title>
           <Mouse onClick={scrollTo} />
         </Background>
       </Root>

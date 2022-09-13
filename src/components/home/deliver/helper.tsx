@@ -5,7 +5,7 @@ import HelpIcon from '@src/components/shared/icons/help';
 export const data = [
   {
     id: 1,
-    text: ' Create and publish answers for customers and reduce your customer support volume by at least 20%. Happier customers, fewer conversations - everyone wins.',
+    text: 'Tailored to your needs we provide fully functional products and services.',
   },
   {
     id: 2,
