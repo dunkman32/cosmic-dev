@@ -14,6 +14,7 @@ import {
 import { Navbar } from '@src/components/layout/header/helper';
 import { useState } from 'react';
 import CustomLink from '@src/components/shared/customLink';
+import Link from 'next/link';
 import Menu, { Burger } from './burger';
 
 const MyComponent = () => {
@@ -26,10 +27,12 @@ const MyComponent = () => {
           <Burger open={open} setOpen={setOpen} />
           <StyledBtn />
         </BurgerArea>
-        <LogoWrapper>
-          <Logo>Cosmic</Logo>
-          <Logo3>{' { Dev } '}</Logo3>
-        </LogoWrapper>
+        <Link href="/">
+          <LogoWrapper style={{ cursor: 'pointer' }}>
+            <Logo>Cosmic</Logo>
+            <Logo3>{' { Dev } '}</Logo3>
+          </LogoWrapper>
+        </Link>
         <List>
           {Navbar.map((val) => (
             <Card key={val.id}>
