@@ -29,7 +29,7 @@ const List = () => {
             >
               <Wrapper key={i}>
                 <ImgWrapper>
-                  <Image src={o.icon} />
+                  <Image layout="fill" src={o.icon} />
                 </ImgWrapper>
                 <ScrollAnimation
                   duration={i + 2}

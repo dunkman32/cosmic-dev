@@ -19,6 +19,7 @@ export const ImgWrapper = styled.div`
   width: 100%;
   height: 200px;
   display: flex;
+  position: relative;
   & img {
     object-fit: cover;
   }
