@@ -4,10 +4,10 @@ import styled from 'styled-components';
 export const Root = styled(StyledPaddingWrapper)`
   position: relative;
   ${(props) => props.theme.breakpoints.up('md')} {
-    margin-top: 120px;
+    margin-top: 90px;
   }
   ${(props) => props.theme.breakpoints.up('lg')} {
-    margin-top: 340px;
+    margin-top: 180px;
   }
 `;
 
