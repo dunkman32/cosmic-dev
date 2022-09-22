@@ -32,7 +32,7 @@ export const STACK = {
     { name: 'Prettier', src: '/images/stack/front/prettier.png' },
     { name: 'ESLint', src: '/images/stack/front/eslint.png' },
     { name: 'Strapi', src: '/images/stack/front/strapi.svg' },
-    { name: 'Docker', src: '/images/stack/front/docker.svg' },
+    { name: 'docker', src: '/images/stack/back/docker.webp' },
   ],
   back: [
     { name: 'Net', src: '/images/stack/back/net.png' },
@@ -42,6 +42,7 @@ export const STACK = {
     { name: 'mongo', src: '/images/stack/back/mongo.png' },
     { name: 'csharp', src: '/images/stack/back/csharp.png' },
     { name: 'mysql', src: '/images/stack/back/mysql.png' },
+    { name: 'docker', src: '/images/stack/back/docker.webp' },
     { name: 'Node.js', src: '/images/stack/back/node.svg' },
     { name: 'oracle', src: '/images/stack/back/oracle.png' },
     { name: 'postgre', src: '/images/stack/back/postgre.png' },
