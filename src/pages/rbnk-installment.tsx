@@ -1,15 +1,20 @@
-const Rebank = () => {
+// @ts-ignore
+import Calc from 'pbginstallmentsdk';
+
+const RebankCalculator = () => {
   return (
-    <iframe
+    <div
       style={{
-        width: '100vw',
-        height: '99.4vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        height: '100%',
       }}
-      title="identomat"
-      src="https://rebank.ge/"
-      allow="camera"
-    />
+    >
+      <Calc amount={40} flag="mGxjx8Z2TJPe6C" />
+    </div>
   );
 };
 
-export default Rebank;
+export default RebankCalculator;
