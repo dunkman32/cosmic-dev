@@ -6,7 +6,7 @@ const Rebank = () => {
         height: '99.4vh',
       }}
       title="identomat"
-      src='https://rebank.ge/'
+      src="https://rebank.ge/"
       allow="camera"
     />
   );
