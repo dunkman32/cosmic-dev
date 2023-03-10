@@ -5,9 +5,6 @@ import { Calc } from 'pbginstallmentsdk';
 const RebankCalculator = () => {
   const router = useRouter();
 
-  console.log(router.query);
-  
-
   return (
     <div
       style={{
