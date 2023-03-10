@@ -31,7 +31,7 @@
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
     "next": "^12.2.5",
-    "pbginstallmentsdk": "^2.0.2",
+    "pbginstallmentsdk": "^2.0.3",
     "prettier": "^2.6.2",
     "react": "^18.2.0",
     "react-animate-on-scroll": "^2.1.5",
