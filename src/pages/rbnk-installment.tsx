@@ -1,7 +1,13 @@
+import { useRouter } from 'next/router';
 // @ts-ignore
-import Calc from 'pbginstallmentsdk';
+import { Calc } from 'pbginstallmentsdk';
 
 const RebankCalculator = () => {
+  const router = useRouter();
+
+  console.log(router.query);
+  
+
   return (
     <div
       style={{
@@ -12,7 +18,7 @@ const RebankCalculator = () => {
         height: '100%',
       }}
     >
-      <Calc amount={40} flag="mGxjx8Z2TJPe6C" />
+      <Calc amount={2} env={router.query.env || 'prod'} code={router.query.code || ''} flag={router.query.flag || ''} />
     </div>
   );
 };
