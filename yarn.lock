@@ -2471,10 +2471,10 @@ path@^0.12.7:
     process "^0.11.1"
     util "^0.10.3"
 
-pbginstallmentsdk@^2.0.16:
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/pbginstallmentsdk/-/pbginstallmentsdk-2.0.16.tgz#f42802702b67694849a89f7529e08a0fbbb9a780"
-  integrity sha512-9k0B16ys5djSwE3PFqAUlaAySl3E7hrY9h9kau+kXfLNwnGQ+uKPSJyFGelP0p7gkbQ6G/U6Avlp/majox0usQ==
+pbginstallmentsdk@^2.0.17:
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/pbginstallmentsdk/-/pbginstallmentsdk-2.0.17.tgz#ce19612d55b0401d0f53676963c7cbaf58e2902e"
+  integrity sha512-yz4xkdwz92rPmyWVYGkidyFy8Q8yD1tTB3XZggUUy8aPqYoDdkFavMbVFOvnWKENS8H5YTb7ruycIe1qujZelA==
   dependencies:
     path "^0.12.7"
     rc-slider "^10.1.1"
