@@ -2471,15 +2471,16 @@ path@^0.12.7:
     process "^0.11.1"
     util "^0.10.3"
 
-pbginstallmentsdk@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/pbginstallmentsdk/-/pbginstallmentsdk-2.0.3.tgz#dcca8ae3acdeb3b3560f3feb8247bb7a5792da0d"
-  integrity sha512-O4JSly6gR7EGQ4B1dg+CUc2gtrw3vwKqOBFq3Lis5PhMs2esZWIWq7Kc70ifIXXZSQmUj+lnEgVUci8ScgjOBw==
+pbginstallmentsdk@^2.0.16:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/pbginstallmentsdk/-/pbginstallmentsdk-2.0.16.tgz#f42802702b67694849a89f7529e08a0fbbb9a780"
+  integrity sha512-9k0B16ys5djSwE3PFqAUlaAySl3E7hrY9h9kau+kXfLNwnGQ+uKPSJyFGelP0p7gkbQ6G/U6Avlp/majox0usQ==
   dependencies:
     path "^0.12.7"
     rc-slider "^10.1.1"
     react "^18.2.0"
     react-dom "^18.2.0"
+    styled-components "^5.3.8"
 
 picocolors@^1.0.0:
   version "1.0.0"
@@ -2896,7 +2897,7 @@ strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-styled-components@^5.3.5:
+styled-components@^5.3.5, styled-components@^5.3.8:
   version "5.3.8"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-5.3.8.tgz#b92e2d10352dc9ecf3b1bc5d27c7500832dcf870"
   integrity sha512-6jQrlvaJQ16uWVVO0rBfApaTPItkqaG32l3746enNZzpMDxMvzmHzj8rHUg39bvVtom0Y8o8ZzWuchEXKGjVsg==
