@@ -15,7 +15,12 @@ const RebankCalculator = () => {
         height: '100%',
       }}
     >
-      <Calc amount={2} env={router.query.env || 'prod'} code={router.query.code || ''} flag={router.query.flag || ''} />
+      <Calc
+        amount={Number(router.query.amount) || 10000}
+        env={router.query.env || 'prod'}
+        merchantId={router.query.merchantId || 'veli'}
+        callback={(month: number) => console.log(month)}
+      />
     </div>
   );
 };
