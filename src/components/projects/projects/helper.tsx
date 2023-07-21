@@ -34,7 +34,7 @@ export const data = [
     icon: uncia,
     title: 'Uncia',
     text: 'Login to your Uncia account to manage your projects',
-    link: 'https://uncia.itstartechs.com/',
+    link: 'https://www.uncia.io/home',
   },
   {
     id: 5,
