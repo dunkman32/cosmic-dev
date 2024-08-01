@@ -4,16 +4,14 @@ import {
   NavItemText,
   StyledBurger,
   StyledMenu,
-  WrapDonate,
   WrapHeader,
 } from '@src/components/layout/header/burger/styled';
-import { StyledButton } from '@src/components/shared';
-import CustomLink from '@src/components/shared/customLink';
 import { Navbar } from '@src/components/layout/header/helper';
-import React, { useEffect } from 'react';
-import Image from 'next/image';
+import CustomLink from '@src/components/shared/customLink';
 import Close from '@src/components/shared/icons/colse';
 import MobileMenu from '@src/components/shared/icons/mobileMenu';
+import Image from 'next/image';
+import { useEffect } from 'react';
 
 export interface StyleProp {
   open: boolean;
@@ -66,7 +64,7 @@ const Menu = ({ open, setOpen }: MenuProps) => {
         </NavItemsWrapper>
       </div>
       <BottomButtons>
-        <WrapDonate>
+        {/* <WrapDonate>
           <CustomLink href="/">
             <StyledButton
               $bgColor="transparent"
@@ -78,7 +76,7 @@ const Menu = ({ open, setOpen }: MenuProps) => {
               donate
             </StyledButton>
           </CustomLink>
-        </WrapDonate>
+        </WrapDonate> */}
       </BottomButtons>
     </StyledMenu>
   );

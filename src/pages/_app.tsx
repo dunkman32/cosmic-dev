@@ -8,7 +8,7 @@ import Provider from '@src/components/provider';
 import { GlobalStyle } from '@src/components/shared/globalStyled';
 // eslint-disable-next-line import/no-unresolved
 // import 'animate.css/animate.min.css';
-
+// service_qta621b
 export interface AppPropsWithLayout extends AppProps {
   Component: NextPage & {
     getLayout?: (page: JSX.Element) => JSX.Element;
