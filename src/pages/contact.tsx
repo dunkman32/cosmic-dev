@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import Layout from '@src/components/layout';
 import { Container } from '@src/components/team/members/styled';
 import { Input } from '@src/components/ui/input';
@@ -11,24 +11,24 @@ const ContactUs = () => {
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        'service_qta621b',
-        'template_t6vqt4r',
-        // @ts-ignore
-        form.current,
-        {
-          publicKey: 'R5GAmwsVgY_j_GplZ',
-        },
-      )
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
+    // emailjs
+    //   .sendForm(
+    //     'service_qta621b',
+    //     'template_t6vqt4r',
+    //     // @ts-ignore
+    //     form.current,
+    //     {
+    //       publicKey: 'R5GAmwsVgY_j_GplZ',
+    //     },
+    //   )
+    //   .then(
+    //     () => {
+    //       console.log('SUCCESS!');
+    //     },
+    //     (error) => {
+    //       console.log('FAILED...', error.text);
+    //     },
+    //   );
   };
 
   return (
