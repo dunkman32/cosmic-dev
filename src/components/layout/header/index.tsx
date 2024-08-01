@@ -41,7 +41,9 @@ const MyComponent = () => {
               </CustomLink>
             </Card>
           ))}
-          <Button>Contact us</Button>
+          <Link href="/contact">
+            <Button>Contact us</Button>
+          </Link>
         </List>
       </Main>
     </Root>

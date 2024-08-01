@@ -30,6 +30,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { useMediaQuery, useTheme } from '@mui/material';
+import Link from 'next/link';
 
 const MainsHeader = () => {
   const theme = useTheme();
@@ -114,7 +115,9 @@ const MainsHeader = () => {
           <LowerWrapper>
             <ButtonWrapper>
               <Button>Start Now</Button>
-              <StyledButtons>Contact Sales</StyledButtons>
+              <Link href="/contact">
+                <StyledButtons>Contact Sales</StyledButtons>
+              </Link>
             </ButtonWrapper>
             <LowerBlueRectangle />
           </LowerWrapper>
