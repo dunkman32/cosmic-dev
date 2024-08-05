@@ -1,34 +1,51 @@
-import React, { useRef } from 'react';
-// import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import Layout from '@src/components/layout';
 import { Container } from '@src/components/team/members/styled';
 import { Input } from '@src/components/ui/input';
 import { Textarea } from '@src/components/ui/textarea';
 import { Button } from '@src/components/ui/button';
+import GoogleCaptcha from '@src/components/shared/google-captcha';
 
 const ContactUs = () => {
   const form = useRef();
+  const [enabled, setEnabled] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const recaptchaRef = useRef(null);
+
   const sendEmail = (e: any) => {
     e.preventDefault();
+    setLoading(true);
+    emailjs
+      .sendForm(
+        'service_qta621b',
+        'template_t6vqt4r',
+        // @ts-ignore
+        form.current,
+        {
+          publicKey: 'R5GAmwsVgY_j_GplZ',
+        },
+      )
+      .then(
+        () => {
+          setEnabled(false);
+          if (recaptchaRef.current) {
+            // @ts-ignore
+            recaptchaRef.current.reset();
+          }
+          setLoading(false);
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setLoading(false);
+        },
+      );
+  };
 
-    // emailjs
-    //   .sendForm(
-    //     'service_qta621b',
-    //     'template_t6vqt4r',
-    //     // @ts-ignore
-    //     form.current,
-    //     {
-    //       publicKey: 'R5GAmwsVgY_j_GplZ',
-    //     },
-    //   )
-    //   .then(
-    //     () => {
-    //       console.log('SUCCESS!');
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error.text);
-    //     },
-    //   );
+  const onChange = (value: string | null) => {
+    if (value) {
+      setEnabled(true);
+    }
   };
 
   return (
@@ -58,7 +75,11 @@ const ContactUs = () => {
             name="message"
             placeholder="Type your message here."
           />
-          <Button type="submit">Send</Button>
+          <GoogleCaptcha recaptchaRef={recaptchaRef} onChange={onChange} />
+
+          <Button type="submit" disabled={!enabled || loading}>
+            {loading ? 'Sending...' : 'Send'}
+          </Button>
         </form>
       </div>
     </Container>
