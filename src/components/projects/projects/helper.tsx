@@ -6,6 +6,7 @@ import affix from '@src/components/shared/images/affix.png';
 import ouchi from '@src/components/shared/images/ouchi.png';
 import asg from '@src/components/shared/images/asg.jpg';
 import datafest from '@src/components/shared/images/datafest.jpg';
+import dealers from '@src/components/shared/images/dealers-app.png';
 
 export const data = [
   {
@@ -56,5 +57,12 @@ export const data = [
     title: 'Datafest Tbilisi',
     text: 'DataFest Tbilisi ​- an annual international conference about data, technology, and communications, bringing together the data community from Eastern Europe and Central Asia, to inspire and encourage, and to create meaningful connections.',
     link: 'https://online.datafest.ge/2019/',
+  },
+  {
+    id: 8,
+    icon: dealers,
+    title: 'Caucasus Auto Dealers application',
+    text: 'Caucasus Auto Import offers you to become our partner and enjoy the following benefits: having personal codes at the US insurance auctions - Copart and IAAI and participating independently, without intermediaries.',
+    link: 'https://my.cai.ge/login',
   },
 ];
